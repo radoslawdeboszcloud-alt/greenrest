@@ -807,14 +807,10 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  color: var(--forest-900);
+  color: var(--text-700);
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.created-by:hover {
-  text-decoration: underline;
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 .created-by__text {
@@ -822,7 +818,7 @@ h3 {
 }
 
 .created-by__logo {
-  height: 52px;
+  height: 24px;
   width: auto;
   display: block;
 }
