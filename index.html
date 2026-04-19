@@ -285,103 +285,58 @@
       <section class="section booking-section reveal" id="zarezerwuj">
         <div class="container booking-shell">
           <div class="booking-intro">
-            <p class="section-label" data-pl="Rezerwacja demo" data-de="Buchung Demo">Rezerwacja demo</p>
+            <p class="section-label" data-pl="Rezerwacja" data-de="Reservierung">Rezerwacja</p>
             <h2
-              data-pl="Wybierz termin i otworz kalendarz Google"
-              data-de="Termin waehlen und Google Kalender oeffnen"
+              data-pl="Wybierz termin pobytu w prostym kalendarzu"
+              data-de="Waehle deinen Aufenthalt im einfachen Kalender"
             >
-              Wybierz termin i otworz kalendarz Google
+              Wybierz termin pobytu w prostym kalendarzu
             </h2>
             <p
-              data-pl="To jest lekka wersja demonstracyjna. Gosc wybiera dogodny termin, a klikniecie przenosi go do Twojego kalendarza Google."
-              data-de="Das ist eine leichte Demo-Version. Der Gast waehlt einen passenden Termin und der Klick fuehrt in deinen Google Kalender."
+              data-pl="Najpierw wybierz przyjazd i wyjazd, potem przejdz dalej do kontaktu lub kalendarza. Calosc dziala lekko i czysto, bez ciezkiego systemu rezerwacji."
+              data-de="Waehle zuerst An- und Abreise, danach gehst du weiter zum Kontakt oder Kalender. Alles bleibt leicht und klar, ohne schweres Buchungssystem."
             >
-              To jest lekka wersja demonstracyjna. Gosc wybiera dogodny termin, a klikniecie przenosi go do Twojego
-              kalendarza Google.
+              Najpierw wybierz przyjazd i wyjazd, potem przejdz dalej do kontaktu lub kalendarza. Calosc dziala lekko i
+              czysto, bez ciezkiego systemu rezerwacji.
             </p>
+            <div class="booking-actions">
+              <button
+                class="btn btn-primary"
+                type="button"
+                id="openBooking"
+                data-pl="Otworz kalendarz"
+                data-de="Kalender oeffnen"
+              >
+                Otworz kalendarz
+              </button>
+              <a class="btn btn-secondary" href="#kontakt" data-pl="Przejdz do kontaktu" data-de="Zum Kontakt">
+                Przejdz do kontaktu
+              </a>
+            </div>
           </div>
 
           <aside class="booking-panel">
-            <p class="info-kicker" data-pl="Jak to dziala" data-de="So funktioniert es">Jak to dziala</p>
-            <h3
-              data-pl="Prosty sposob na pokazanie dostepnych terminow"
-              data-de="Ein einfacher Weg, freie Termine zu zeigen"
-            >
-              Prosty sposob na pokazanie dostepnych terminow
-            </h3>
-            <p
-              data-pl="Na tym etapie nie udajemy pelnego systemu rezerwacji. Sekcja wyglada jak wybor terminu, ale finalnie otwiera prawdziwy kalendarz."
-              data-de="In dieser Phase wird kein vollstaendliches Buchungssystem vorgetaeuscht. Die Sektion wirkt wie eine Terminauswahl, oeffnet am Ende aber den echten Kalender."
-            >
-              Na tym etapie nie udajemy pelnego systemu rezerwacji. Sekcja wyglada jak wybor terminu, ale finalnie
-              otwiera prawdziwy kalendarz.
-            </p>
+            <p class="info-kicker" data-pl="Twoj pobyt" data-de="Dein Aufenthalt">Twoj pobyt</p>
+            <div class="booking-summary">
+              <div class="booking-summary__item">
+                <span data-pl="Przyjazd" data-de="Anreise">Przyjazd</span>
+                <strong id="bookingStartLabel">--</strong>
+              </div>
+              <div class="booking-summary__item">
+                <span data-pl="Wyjazd" data-de="Abreise">Wyjazd</span>
+                <strong id="bookingEndLabel">--</strong>
+              </div>
+              <div class="booking-summary__item">
+                <span data-pl="Liczba nocy" data-de="Naechte">Liczba nocy</span>
+                <strong id="bookingNightsLabel" data-pl="Wybierz daty" data-de="Waehle Daten">Wybierz daty</strong>
+              </div>
+            </div>
+            <div class="booking-pills">
+              <span class="booking-chip" data-pl="Spokojny pobyt" data-de="Ruhiger Aufenthalt">Spokojny pobyt</span>
+              <span class="booking-chip" data-pl="Elastyczny wybor" data-de="Flexible Auswahl">Elastyczny wybor</span>
+              <span class="booking-chip" data-pl="Bezposredni kontakt" data-de="Direkter Kontakt">Bezposredni kontakt</span>
+            </div>
           </aside>
-
-          <div class="booking-grid">
-            <article class="booking-card">
-              <span class="booking-chip" data-pl="Weekend" data-de="Wochenende">Weekend</span>
-              <h3>15 - 17 May 2026</h3>
-              <p
-                data-pl="Dobry wybor na szybki wyjazd dla 2 osob lub malej rodziny."
-                data-de="Eine gute Wahl fuer eine kurze Auszeit zu zweit oder fuer eine kleine Familie."
-              >
-                Dobry wybor na szybki wyjazd dla 2 osob lub malej rodziny.
-              </p>
-              <a
-                class="btn btn-primary"
-                href="https://calendar.google.com/calendar/u/0?cid=cmFkb3NsYXdkZWJvc3pAZ21haWwuY29t"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-pl="Wybierz ten termin"
-                data-de="Diesen Termin waehlen"
-              >
-                Wybierz ten termin
-              </a>
-            </article>
-
-            <article class="booking-card booking-card--featured">
-              <span class="booking-chip" data-pl="Najczesciej wybierany" data-de="Beliebt">Najczesciej wybierany</span>
-              <h3>22 - 24 May 2026</h3>
-              <p
-                data-pl="Najbardziej uniwersalny termin demo, dobrze wyglada jako glowna propozycja na stronie."
-                data-de="Der vielseitigste Demo-Termin und die staerkste Hauptoption fuer die Seite."
-              >
-                Najbardziej uniwersalny termin demo, dobrze wyglada jako glowna propozycja na stronie.
-              </p>
-              <a
-                class="btn btn-primary"
-                href="https://calendar.google.com/calendar/u/0?cid=cmFkb3NsYXdkZWJvc3pAZ21haWwuY29t"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-pl="Otworz w kalendarzu"
-                data-de="Im Kalender oeffnen"
-              >
-                Otworz w kalendarzu
-              </a>
-            </article>
-
-            <article class="booking-card">
-              <span class="booking-chip" data-pl="Dluzszy pobyt" data-de="Laengerer Aufenthalt">Dluzszy pobyt</span>
-              <h3>29 May - 2 Jun 2026</h3>
-              <p
-                data-pl="Opcja dla gosci, ktorzy chca polaczyc odpoczynek z kilkoma spokojnymi dniami na miejscu."
-                data-de="Eine Option fuer Gaeste, die Erholung mit mehreren ruhigen Tagen vor Ort verbinden wollen."
-              >
-                Opcja dla gosci, ktorzy chca polaczyc odpoczynek z kilkoma spokojnymi dniami na miejscu.
-              </p>
-              <a
-                class="btn btn-primary"
-                href="https://calendar.google.com/calendar/u/0?cid=cmFkb3NsYXdkZWJvc3pAZ21haWwuY29t"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-pl="Sprawdz termin"
-                data-de="Termin pruefen"
-              >
-                Sprawdz termin
-              </a>
-            </article>
-          </div>
         </div>
       </section>
 
@@ -399,16 +354,15 @@
             </p>
           </div>
           <div class="contact-actions">
-            <a
+            <button
               class="btn btn-primary"
-              href="https://calendar.google.com/calendar/u/0?cid=cmFkb3NsYXdkZWJvc3pAZ21haWwuY29t"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-pl="Otworz Google Calendar"
-              data-de="Google Kalender oeffnen"
+              type="button"
+              id="openBookingContact"
+              data-pl="Wybierz termin"
+              data-de="Termin waehlen"
             >
-              Otworz Google Calendar
-            </a>
+              Wybierz termin
+            </button>
             <a class="btn btn-secondary btn-secondary-solid" href="mailto:kontakt@greenrest.example">
               kontakt@greenrest.example
             </a>
@@ -471,6 +425,68 @@
       </div>
     </div>
 
+    <div class="modal booking-modal" id="bookingModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__backdrop" data-close-booking></div>
+      <div class="booking-modal__content" role="document">
+        <button class="modal__close" type="button" data-close-booking aria-label="Close">x</button>
+        <div class="booking-modal__header">
+          <div>
+            <p class="section-label" data-pl="Kalendarz pobytu" data-de="Aufenthaltskalender">Kalendarz pobytu</p>
+            <h2 data-pl="Wybierz przyjazd i wyjazd" data-de="Waehle Anreise und Abreise">
+              Wybierz przyjazd i wyjazd
+            </h2>
+          </div>
+          <div class="booking-modal__nav">
+            <button class="calendar-switch" type="button" id="bookingPrevMonth" aria-label="Previous month">&lsaquo;</button>
+            <strong id="bookingMonthLabel">May 2026</strong>
+            <button class="calendar-switch" type="button" id="bookingNextMonth" aria-label="Next month">&rsaquo;</button>
+          </div>
+        </div>
+
+        <div class="booking-weekdays">
+          <span data-pl="Pon" data-de="Mo">Pon</span>
+          <span data-pl="Wt" data-de="Di">Wt</span>
+          <span data-pl="Sr" data-de="Mi">Sr</span>
+          <span data-pl="Czw" data-de="Do">Czw</span>
+          <span data-pl="Pt" data-de="Fr">Pt</span>
+          <span data-pl="Sob" data-de="Sa">Sob</span>
+          <span data-pl="Nd" data-de="So">Nd</span>
+        </div>
+
+        <div class="booking-calendar" id="bookingCalendar"></div>
+
+        <div class="booking-modal__footer">
+          <div class="booking-modal__summary">
+            <p id="bookingSelectionText" data-pl="Wybierz daty pobytu" data-de="Waehle deine Aufenthaltsdaten">
+              Wybierz daty pobytu
+            </p>
+          </div>
+          <div class="booking-modal__actions">
+            <button
+              class="btn btn-secondary btn-secondary-solid"
+              type="button"
+              id="bookingReset"
+              data-pl="Wyczysc wybor"
+              data-de="Auswahl loeschen"
+            >
+              Wyczysc wybor
+            </button>
+            <a
+              class="btn btn-primary"
+              id="bookingCalendarLink"
+              href="https://calendar.google.com/calendar/u/0?cid=cmFkb3NsYXdkZWJvc3pAZ21haWwuY29t"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-pl="Przejdz do Google Calendar"
+              data-de="Zu Google Kalender"
+            >
+              Przejdz do Google Calendar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
       const footerCopyright = document.querySelector(".footer-inner p");
@@ -490,10 +506,24 @@
       const galleryModal = document.getElementById("galleryModal");
       const openGallery = document.getElementById("openGallery");
       const closeGallery = document.querySelectorAll("[data-close-gallery]");
+      const bookingModal = document.getElementById("bookingModal");
+      const openBookingButtons = [document.getElementById("openBooking"), document.getElementById("openBookingContact")];
+      const closeBooking = document.querySelectorAll("[data-close-booking]");
+      const bookingCalendar = document.getElementById("bookingCalendar");
+      const bookingMonthLabel = document.getElementById("bookingMonthLabel");
+      const bookingSelectionText = document.getElementById("bookingSelectionText");
+      const bookingStartLabel = document.getElementById("bookingStartLabel");
+      const bookingEndLabel = document.getElementById("bookingEndLabel");
+      const bookingNightsLabel = document.getElementById("bookingNightsLabel");
+      const bookingPrevMonth = document.getElementById("bookingPrevMonth");
+      const bookingNextMonth = document.getElementById("bookingNextMonth");
+      const bookingReset = document.getElementById("bookingReset");
+      const bookingCalendarLink = document.getElementById("bookingCalendarLink");
       const galleryPrev = document.getElementById("galleryPrev");
       const galleryNext = document.getElementById("galleryNext");
       const galleryImage = document.getElementById("galleryImage");
       const galleryCaption = document.getElementById("galleryCaption");
+      const googleCalendarUrl = "https://calendar.google.com/calendar/u/0?cid=cmFkb3NsYXdkZWJvc3pAZ21haWwuY29t";
       const galleryItems = [
         {
           src: "assets/hero.jpg",
@@ -537,6 +567,160 @@
         },
       ];
       let galleryIndex = 0;
+      let bookingViewDate = new Date(2026, 4, 1);
+      let bookingStart = null;
+      let bookingEnd = null;
+      const blockedDates = new Set(["2026-05-09", "2026-05-10", "2026-05-23", "2026-06-06", "2026-06-13"]);
+      const monthNames = {
+        pl: ["Styczen", "Luty", "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien", "Pazdziernik", "Listopad", "Grudzien"],
+        de: ["Januar", "Februar", "Maerz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
+      };
+      const weekdayNames = {
+        pl: ["Pon", "Wt", "Sr", "Czw", "Pt", "Sob", "Nd"],
+        de: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
+      };
+
+      function activeLanguage() {
+        return document.documentElement.lang === "de" ? "de" : "pl";
+      }
+
+      function dateKey(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+      }
+
+      function normalizeDate(date) {
+        return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+      }
+
+      function formatBookingDate(date, lang) {
+        if (!date) return "--";
+        const months = {
+          pl: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "paz", "lis", "gru"],
+          de: ["Jan", "Feb", "Maerz", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
+        };
+        return `${date.getDate()} ${months[lang][date.getMonth()]} ${date.getFullYear()}`;
+      }
+
+      function nightCount() {
+        if (!bookingStart || !bookingEnd) return 0;
+        return Math.round((bookingEnd - bookingStart) / 86400000);
+      }
+
+      function updateBookingSummary() {
+        const lang = activeLanguage();
+        if (bookingStartLabel) bookingStartLabel.textContent = formatBookingDate(bookingStart, lang);
+        if (bookingEndLabel) bookingEndLabel.textContent = formatBookingDate(bookingEnd, lang);
+
+        if (bookingNightsLabel) {
+          if (bookingStart && bookingEnd) {
+            const nights = nightCount();
+            bookingNightsLabel.textContent = lang === "de" ? `${nights} Naechte` : `${nights} nocy`;
+          } else {
+            bookingNightsLabel.textContent = lang === "de" ? "Waehle Daten" : "Wybierz daty";
+          }
+        }
+
+        if (bookingSelectionText) {
+          if (bookingStart && bookingEnd) {
+            bookingSelectionText.textContent =
+              lang === "de"
+                ? `${formatBookingDate(bookingStart, lang)} bis ${formatBookingDate(bookingEnd, lang)}`
+                : `${formatBookingDate(bookingStart, lang)} - ${formatBookingDate(bookingEnd, lang)}`;
+          } else if (bookingStart) {
+            bookingSelectionText.textContent =
+              lang === "de"
+                ? `Anreise: ${formatBookingDate(bookingStart, lang)}`
+                : `Przyjazd: ${formatBookingDate(bookingStart, lang)}`;
+          } else {
+            bookingSelectionText.textContent = lang === "de" ? "Waehle deine Aufenthaltsdaten" : "Wybierz daty pobytu";
+          }
+        }
+
+        if (bookingCalendarLink) {
+          bookingCalendarLink.href = googleCalendarUrl;
+        }
+      }
+
+      function setBooking(open) {
+        if (!bookingModal) return;
+        bookingModal.classList.toggle("modal--open", open);
+        bookingModal.setAttribute("aria-hidden", String(!open));
+        if (open) renderBookingCalendar();
+      }
+
+      function resetBookingSelection() {
+        bookingStart = null;
+        bookingEnd = null;
+        updateBookingSummary();
+        renderBookingCalendar();
+      }
+
+      function selectBookingDate(rawDate) {
+        const selectedDate = normalizeDate(rawDate);
+        if (!bookingStart || (bookingStart && bookingEnd)) {
+          bookingStart = selectedDate;
+          bookingEnd = null;
+        } else if (selectedDate <= bookingStart) {
+          bookingStart = selectedDate;
+          bookingEnd = null;
+        } else {
+          bookingEnd = selectedDate;
+        }
+
+        updateBookingSummary();
+        renderBookingCalendar();
+      }
+
+      function renderBookingCalendar() {
+        if (!bookingCalendar || !bookingMonthLabel) return;
+
+        const lang = activeLanguage();
+        const today = normalizeDate(new Date());
+        const year = bookingViewDate.getFullYear();
+        const month = bookingViewDate.getMonth();
+        const firstDay = new Date(year, month, 1);
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const mondayOffset = (firstDay.getDay() + 6) % 7;
+
+        bookingMonthLabel.textContent = `${monthNames[lang][month]} ${year}`;
+        bookingCalendar.innerHTML = "";
+
+        for (let i = 0; i < mondayOffset; i += 1) {
+          const emptyCell = document.createElement("div");
+          emptyCell.className = "calendar-day--empty";
+          bookingCalendar.appendChild(emptyCell);
+        }
+
+        for (let day = 1; day <= daysInMonth; day += 1) {
+          const date = new Date(year, month, day);
+          const key = dateKey(date);
+          const weekdayIndex = (date.getDay() + 6) % 7;
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "calendar-day";
+          button.innerHTML = `${day}<span>${weekdayNames[lang][weekdayIndex]}</span>`;
+
+          const isBlocked = blockedDates.has(key) || date < today;
+          const isStart = bookingStart && key === dateKey(bookingStart);
+          const isEnd = bookingEnd && key === dateKey(bookingEnd);
+          const isInRange = bookingStart && bookingEnd && date > bookingStart && date < bookingEnd;
+
+          if (isBlocked) {
+            button.classList.add("calendar-day--disabled");
+            button.disabled = true;
+          } else {
+            button.addEventListener("click", () => selectBookingDate(date));
+          }
+
+          if (isInRange) button.classList.add("calendar-day--in-range");
+          if (isStart || isEnd) button.classList.add("calendar-day--selected");
+
+          bookingCalendar.appendChild(button);
+        }
+      }
 
       function setLanguage(lang) {
         document.documentElement.lang = lang;
@@ -549,6 +733,8 @@
         });
 
         updateGalleryItem(galleryIndex);
+        updateBookingSummary();
+        renderBookingCalendar();
       }
 
       function setMenu(open) {
@@ -611,17 +797,40 @@
           setGallery(true);
         });
       }
+      openBookingButtons.filter(Boolean).forEach((button) => {
+        button.addEventListener("click", () => {
+          renderBookingCalendar();
+          setBooking(true);
+        });
+      });
       closeGallery.forEach((btn) => btn.addEventListener("click", () => setGallery(false)));
+      closeBooking.forEach((btn) => btn.addEventListener("click", () => setBooking(false)));
       if (galleryPrev) {
         galleryPrev.addEventListener("click", () => changeGallery(-1));
       }
       if (galleryNext) {
         galleryNext.addEventListener("click", () => changeGallery(1));
       }
+      if (bookingPrevMonth) {
+        bookingPrevMonth.addEventListener("click", () => {
+          bookingViewDate = new Date(bookingViewDate.getFullYear(), bookingViewDate.getMonth() - 1, 1);
+          renderBookingCalendar();
+        });
+      }
+      if (bookingNextMonth) {
+        bookingNextMonth.addEventListener("click", () => {
+          bookingViewDate = new Date(bookingViewDate.getFullYear(), bookingViewDate.getMonth() + 1, 1);
+          renderBookingCalendar();
+        });
+      }
+      if (bookingReset) {
+        bookingReset.addEventListener("click", () => resetBookingSelection());
+      }
 
       document.addEventListener("keydown", (event) => {
         if (event.key === "Escape") setImpressum(false);
         if (event.key === "Escape") setGallery(false);
+        if (event.key === "Escape") setBooking(false);
         if (galleryModal && galleryModal.classList.contains("modal--open")) {
           if (event.key === "ArrowLeft") changeGallery(-1);
           if (event.key === "ArrowRight") changeGallery(1);
@@ -642,6 +851,8 @@
       );
 
       revealItems.forEach((item) => revealObserver.observe(item));
+      updateBookingSummary();
+      renderBookingCalendar();
     </script>
   </body>
 </html>
