@@ -796,6 +796,7 @@ h3 {
 }
 
 .gallery-nav {
+  position: relative;
   width: 58px;
   height: 58px;
   border: 0;
@@ -947,11 +948,24 @@ h3 {
   .gallery-modal__content {
     min-height: auto;
     margin-top: 10vh;
+    gap: 0;
   }
 
   .gallery-nav {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
     width: 52px;
     height: 52px;
-    margin: 0 auto;
+    margin: 0;
+    transform: translateY(-50%);
+  }
+
+  .gallery-nav--prev {
+    left: 8px;
+  }
+
+  .gallery-nav--next {
+    right: 8px;
   }
 }
