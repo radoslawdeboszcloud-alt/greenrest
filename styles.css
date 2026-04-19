@@ -687,6 +687,94 @@ h3 {
   color: rgba(255, 255, 255, 0.84);
 }
 
+.booking-section {
+  padding-top: 26px;
+}
+
+.booking-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.7fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.booking-intro,
+.booking-panel,
+.booking-card {
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.booking-intro {
+  padding: 30px 32px;
+  border-radius: 32px;
+}
+
+.booking-intro p:last-child,
+.booking-panel p:last-child,
+.booking-card p:last-child {
+  margin-bottom: 0;
+}
+
+.booking-panel {
+  padding: 28px;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(183, 206, 165, 0.16), rgba(255, 255, 255, 0.9)),
+    rgba(255, 255, 255, 0.82);
+}
+
+.booking-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.booking-card {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 28px;
+}
+
+.booking-card h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+.booking-card p {
+  color: var(--text-700);
+}
+
+.booking-card--featured {
+  transform: translateY(-10px);
+  background:
+    linear-gradient(180deg, rgba(183, 206, 165, 0.18), rgba(255, 255, 255, 0.94)),
+    rgba(255, 255, 255, 0.84);
+}
+
+.booking-chip {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(23, 51, 40, 0.08);
+  color: var(--forest-700);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.btn-secondary-solid {
+  color: var(--forest-900);
+  background: rgba(183, 206, 165, 0.22);
+  border: 1px solid rgba(47, 92, 69, 0.16);
+}
+
 .contact-section {
   padding-bottom: 96px;
 }
@@ -839,6 +927,7 @@ h3 {
   .intro-grid,
   .scenic-grid,
   .stay-grid,
+  .booking-shell,
   .gallery-head,
   .map-panel,
   .gallery-grid,
@@ -849,6 +938,14 @@ h3 {
 
   .discover-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-card--featured {
+    transform: none;
   }
 
   .hero-note {
@@ -953,6 +1050,7 @@ h3 {
   }
 
   .discover-grid,
+  .booking-grid,
   .gallery-modal__content {
     grid-template-columns: 1fr;
   }
