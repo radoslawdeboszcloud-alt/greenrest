@@ -804,13 +804,27 @@ h3 {
 }
 
 .created-by {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   color: var(--forest-900);
   text-decoration: none;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
 .created-by:hover {
   text-decoration: underline;
+}
+
+.created-by__text {
+  letter-spacing: 0.02em;
+}
+
+.created-by__logo {
+  height: 52px;
+  width: auto;
+  display: block;
 }
 
 .modal {
