@@ -471,17 +471,15 @@
             >
               Wyczysc wybor
             </button>
-            <a
+            <button
               class="btn btn-primary"
-              id="bookingCalendarLink"
-              href="https://calendar.google.com/calendar/u/0?cid=cmFkb3NsYXdkZWJvc3pAZ21haWwuY29t"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-pl="Przejdz do Google Calendar"
-              data-de="Zu Google Kalender"
+              type="button"
+              id="bookingConfirm"
+              data-pl="Zapisz termin"
+              data-de="Termin speichern"
             >
-              Przejdz do Google Calendar
-            </a>
+              Zapisz termin
+            </button>
           </div>
         </div>
       </div>
@@ -518,12 +516,11 @@
       const bookingPrevMonth = document.getElementById("bookingPrevMonth");
       const bookingNextMonth = document.getElementById("bookingNextMonth");
       const bookingReset = document.getElementById("bookingReset");
-      const bookingCalendarLink = document.getElementById("bookingCalendarLink");
+      const bookingConfirm = document.getElementById("bookingConfirm");
       const galleryPrev = document.getElementById("galleryPrev");
       const galleryNext = document.getElementById("galleryNext");
       const galleryImage = document.getElementById("galleryImage");
       const galleryCaption = document.getElementById("galleryCaption");
-      const googleCalendarUrl = "https://calendar.google.com/calendar/u/0?cid=cmFkb3NsYXdkZWJvc3pAZ21haWwuY29t";
       const galleryItems = [
         {
           src: "assets/hero.jpg",
@@ -639,8 +636,8 @@
           }
         }
 
-        if (bookingCalendarLink) {
-          bookingCalendarLink.href = googleCalendarUrl;
+        if (bookingConfirm) {
+          bookingConfirm.disabled = !(bookingStart && bookingEnd);
         }
       }
 
@@ -825,6 +822,12 @@
       }
       if (bookingReset) {
         bookingReset.addEventListener("click", () => resetBookingSelection());
+      }
+      if (bookingConfirm) {
+        bookingConfirm.addEventListener("click", () => {
+          if (!(bookingStart && bookingEnd)) return;
+          setBooking(false);
+        });
       }
 
       document.addEventListener("keydown", (event) => {
