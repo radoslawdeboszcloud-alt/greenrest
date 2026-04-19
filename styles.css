@@ -851,11 +851,6 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .hero-stats {
-    grid-template-columns: 1fr;
-    max-width: 360px;
-  }
-
   .hero-note {
     position: static;
     margin: 18px 16px 0 auto;
@@ -917,6 +912,32 @@ h3 {
 
   .hero-content {
     padding: 112px 0 52px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-content::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(300px, 72vw);
+  }
+
+  .eyebrow,
+  .lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lead {
+    max-width: 34ch;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-note {
+    margin: 18px auto 0;
   }
 
   .scroll-cue {
