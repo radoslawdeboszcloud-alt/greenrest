@@ -322,8 +322,7 @@ h3 {
   max-width: 700px;
 }
 
-.hero-stat,
-.hero-note {
+.hero-stat {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(255, 255, 255, 0.08);
@@ -348,24 +347,6 @@ h3 {
   margin-top: 6px;
   color: rgba(255, 255, 255, 0.78);
   font-size: 0.92rem;
-}
-
-.hero-note {
-  position: absolute;
-  right: min(5vw, 60px);
-  bottom: 88px;
-  z-index: 1;
-  max-width: 260px;
-  padding: 20px 22px;
-  border-radius: 24px;
-  transform: rotate(-4deg);
-}
-
-.hero-note p {
-  margin-bottom: 0;
-  color: var(--white);
-  font-size: 1.05rem;
-  line-height: 1.35;
 }
 
 .scroll-cue {
@@ -1087,12 +1068,6 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .hero-note {
-    position: static;
-    margin: 18px 16px 0 auto;
-    transform: rotate(-2deg);
-  }
-
   .feature-grid {
     grid-template-columns: 1fr;
   }
@@ -1178,10 +1153,6 @@ h3 {
 
   .hero-actions {
     justify-content: center;
-  }
-
-  .hero-note {
-    margin: 18px auto 0;
   }
 
   .scroll-cue {
