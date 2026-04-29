@@ -76,8 +76,9 @@
           atmosfera, w ktorej mozna zwolnic tempo.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-booking" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
-            <span data-pl="Rezerwuj na Booking.com" data-de="Auf Booking.com buchen">Rezerwuj na Booking.com</span>
+          <a class="btn btn-booking btn-booking--icon" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
+            <img src="assets/booking.png" alt="Booking.com" class="btn-booking__logo" />
+            <span class="sr-only" data-pl="Rezerwuj na Booking.com" data-de="Auf Booking.com buchen">Rezerwuj na Booking.com</span>
           </a>
           <a class="btn btn-secondary" href="#galeria" data-pl="Zobacz miejsce" data-de="Ort ansehen">Zobacz miejsce</a>
         </div>
@@ -395,9 +396,9 @@
             >
               Zarezerwuj pobyt bezposrednio na Booking.com
             </h2>
-            <a class="btn btn-booking btn-booking--with-logo" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
+            <a class="btn btn-booking btn-booking--icon btn-booking--cta" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
               <img src="assets/booking.png" alt="Booking.com" class="btn-booking__logo" />
-              <span data-pl="Zarezerwuj pobyt bezposrednio na Booking.com" data-de="Buche deinen Aufenthalt direkt auf Booking.com">
+              <span class="sr-only" data-pl="Zarezerwuj pobyt bezposrednio na Booking.com" data-de="Buche deinen Aufenthalt direkt auf Booking.com">
                 Zarezerwuj pobyt bezposrednio na Booking.com
               </span>
             </a>
@@ -449,8 +450,9 @@
               </div>
 
               <div class="contact-secondary">
-                <a class="btn btn-booking btn-booking-soft" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
-                  <span data-pl="Rezerwuj na Booking.com" data-de="Auf Booking.com buchen">Rezerwuj na Booking.com</span>
+                <a class="btn btn-booking btn-booking-soft btn-booking--icon" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
+                  <img src="assets/booking.png" alt="Booking.com" class="btn-booking__logo" />
+                  <span class="sr-only" data-pl="Rezerwuj na Booking.com" data-de="Auf Booking.com buchen">Rezerwuj na Booking.com</span>
                 </a>
                 <div class="contact-details">
                   <a class="contact-detail" href="mailto:kontakt@greenrest.example">
@@ -487,9 +489,11 @@
     <footer class="footer">
       <div class="container footer-inner">
         <p>&copy; <span id="year"></span> Greenrest</p>
+        <span class="footer-separator" aria-hidden="true">|</span>
         <button class="footer-link" type="button" data-open-impressum data-pl="Impressum" data-de="Impressum">
           Impressum
         </button>
+        <span class="footer-separator" aria-hidden="true">|</span>
         <a
           class="created-by"
           href="https://rado.it.com"
