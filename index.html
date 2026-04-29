@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body data-booking-url="https://www.booking.com/" data-whatsapp-number="491234567890">
     <div class="page-glow page-glow-a" aria-hidden="true"></div>
     <div class="page-glow page-glow-b" aria-hidden="true"></div>
 
@@ -18,12 +18,9 @@
       <div class="container nav">
         <a href="#start" class="brand" aria-label="Greenrest start">
           <span class="brand-mark">Greenrest</span>
-          <span
-            class="brand-sub"
-            data-pl="agroturystyka i odpoczynek"
-            data-de="Agrotourismus und Erholung"
-            >agroturystyka i odpoczynek</span
-          >
+          <span class="brand-sub" data-pl="agroturystyka i odpoczynek" data-de="Agrotourismus und Erholung">
+            agroturystyka i odpoczynek
+          </span>
         </a>
 
         <div class="nav-actions">
@@ -34,14 +31,16 @@
           </button>
 
           <div class="menu" id="mainMenu">
-            <a href="#o-nas" data-pl="O miejscu" data-de="Über uns">O miejscu</a>
-            <a href="#pobyt" data-pl="Pobyt" data-de="Aufenthalt">Pobyt</a>
+            <a href="#o-nas" data-pl="O nas" data-de="Ueber uns">O nas</a>
             <a href="#okolica" data-pl="Okolica" data-de="Umgebung">Okolica</a>
             <a href="#galeria" data-pl="Galeria" data-de="Galerie">Galeria</a>
-            <a href="#kontakt" data-pl="Kontakt" data-de="Kontakt">Kontakt</a>
-            <button class="menu-link" type="button" data-open-impressum data-pl="Impressum" data-de="Impressum">
-              Impressum
+            <button class="menu-link" type="button" data-open-news data-pl="Aktualnosci" data-de="Neuigkeiten">
+              Aktualnosci
             </button>
+            <button class="menu-link" type="button" data-open-bike data-pl="Rent a Bike" data-de="Rent a Bike">
+              Rent a Bike
+            </button>
+            <a href="#kontakt" data-pl="Kontakt" data-de="Kontakt">Kontakt</a>
           </div>
 
           <div class="menu-backdrop" data-close-menu></div>
@@ -70,16 +69,16 @@
         </h1>
         <p
           class="lead"
-          data-pl="Miejsce dla osób, które szukają ciszy, zieleni i prostego odpoczynku. Kameralny pobyt, naturalne otoczenie i atmosfera, w której można zwolnić tempo."
-          data-de="Ein Ort für Menschen, die Ruhe, Grün und echte Erholung suchen. Ein kleiner Aufenthalt in natürlicher Umgebung mit einer Atmosphäre, in der man bewusst langsamer wird."
+          data-pl="Miejsce dla osob, ktore szukaja ciszy, zieleni i prostego odpoczynku. Kameralny pobyt, naturalne otoczenie i atmosfera, w ktorej mozna zwolnic tempo."
+          data-de="Ein Ort fuer Menschen, die Ruhe, Gruen und echte Erholung suchen. Ein kleiner Aufenthalt in natuerlicher Umgebung mit einer Atmosphaere, in der man bewusst langsamer wird."
         >
-          Miejsce dla osób, które szukają ciszy, zieleni i prostego odpoczynku. Kameralny pobyt, naturalne otoczenie i
-          atmosfera, w której można zwolnić tempo.
+          Miejsce dla osob, ktore szukaja ciszy, zieleni i prostego odpoczynku. Kameralny pobyt, naturalne otoczenie i
+          atmosfera, w ktorej mozna zwolnic tempo.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#zarezerwuj" data-pl="Zarezerwuj termin" data-de="Termin waehlen"
-            >Zarezerwuj termin</a
-          >
+          <a class="btn btn-booking" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
+            <span data-pl="Rezerwuj na Booking.com" data-de="Auf Booking.com buchen">Rezerwuj na Booking.com</span>
+          </a>
           <a class="btn btn-secondary" href="#galeria" data-pl="Zobacz miejsce" data-de="Ort ansehen">Zobacz miejsce</a>
         </div>
       </div>
@@ -92,107 +91,43 @@
       <section class="section intro-section reveal" id="o-nas">
         <div class="container intro-grid">
           <div>
-            <p class="section-label" data-pl="O miejscu" data-de="Der Ort">O miejscu</p>
+            <p class="section-label" data-pl="O nas" data-de="Ueber uns">O nas</p>
             <h2
-              data-pl="Agroturystyka z naciskiem na spokój, prostotę i kontakt z przyrodą"
-              data-de="Agrotourismus mit Fokus auf Ruhe, Einfachheit und Naturverbundenheit"
+              data-pl="Greenrest - spokojny wypoczynek, prostota i bliskosc natury"
+              data-de="Greenrest - ruhige Auszeit, Einfachheit und die Naehe zur Natur"
             >
-              Agroturystyka z naciskiem na spokój, prostotę i kontakt z przyrodą
+              Greenrest - spokojny wypoczynek, prostota i bliskosc natury
             </h2>
           </div>
           <div class="text-stack">
             <p
-              data-pl="Greenrest to przestrzeń na odpoczynek od miasta i codziennego pośpiechu. To miejsce dla gości, którzy cenią ciszę, naturalny krajobraz i pobyt bez nadmiaru."
-              data-de="Greenrest ist ein Ort zum Abstandnehmen von Stadt und Alltagsdruck. Für Gäste, die Stille, natürliche Landschaft und einen Aufenthalt ohne Überladung schätzen."
+              data-pl="Greenrest to przestrzen na odpoczynek od miasta i codziennego pospiechu. To miejsce dla gosci, ktorzy cenia cisze, naturalny krajobraz i pobyt bez nadmiaru."
+              data-de="Greenrest ist ein Ort zum Abstandnehmen von Stadt und Alltagsdruck. Fuer Gaeste, die Stille, natuerliche Landschaft und einen Aufenthalt ohne Ueberladung schaetzen."
             >
-              Greenrest to przestrzeń na odpoczynek od miasta i codziennego pośpiechu. To miejsce dla gości, którzy
-              cenią ciszę, naturalny krajobraz i pobyt bez nadmiaru.
+              Greenrest to przestrzen na odpoczynek od miasta i codziennego pospiechu. To miejsce dla gosci, ktorzy cenia
+              cisze, naturalny krajobraz i pobyt bez nadmiaru.
             </p>
             <p
-              data-pl="Strona prowadzi gościa prosto przez najważniejsze informacje: klimat miejsca, charakter pobytu, galerię i kontakt. Całość ma pozostać spokojna, czytelna i naturalna."
-              data-de="Die Seite führt Gäste klar durch die wichtigsten Inhalte: Atmosphäre des Ortes, Charakter des Aufenthalts, Galerie und Kontakt. Alles soll ruhig, übersichtlich und natürlich wirken."
+              data-pl="To miejsce dla par, rodzin i wszystkich, ktorzy chca zwolnic tempo, odpoczac bez rozpraszaczy i dobrze poczuc sie blisko zieleni."
+              data-de="Es ist ein Ort fuer Paare, Familien und alle, die das Tempo reduzieren, ohne Ablenkung entspannen und die gruene Umgebung bewusst erleben moechten."
             >
-              Strona prowadzi gościa prosto przez najważniejsze informacje: klimat miejsca, charakter pobytu, galerię i
-              kontakt. Całość ma pozostać spokojna, czytelna i naturalna.
+              To miejsce dla par, rodzin i wszystkich, ktorzy chca zwolnic tempo, odpoczac bez rozpraszaczy i dobrze
+              poczuc sie blisko zieleni.
             </p>
           </div>
         </div>
-      </section>
-
-      <section class="section scenic-band reveal">
-        <div class="container scenic-grid">
-          <div class="scenic-copy">
-            <p class="section-label" data-pl="Atmosfera" data-de="Atmosphäre">Atmosfera</p>
-            <h2
-              data-pl="Nie kolejny nocleg, tylko nastrojowy wyjazd z charakterem"
-              data-de="Nicht nur eine Unterkunft, sondern ein stimmungsvoller Aufenthalt mit Charakter"
-            >
-              Nie kolejny nocleg, tylko nastrojowy wyjazd z charakterem
-            </h2>
-            <p
-              data-pl="Tutaj największe wrażenie robi prostota: światło, zieleń, spokój i naturalny rytm dnia. To właśnie warto pokazać mocniej, bo to buduje klimat Greenrest."
-              data-de="Hier entsteht der stärkste Eindruck durch Einfachheit: Licht, Grün, Ruhe und ein natürlicher Tagesrhythmus. Genau das sollte stärker sichtbar sein, denn daraus entsteht der Charakter von Greenrest."
-            >
-              Tutaj największe wrażenie robi prostota: światło, zieleń, spokój i naturalny rytm dnia. To właśnie warto
-              pokazać mocniej, bo to buduje klimat Greenrest.
-            </p>
-          </div>
-          <div class="scenic-quote">
-            <p
-              data-pl="&quot;Poranek z kawą, cisza wokół i wrażenie, że czas na chwilę zwolnił.&quot;"
-              data-de="&quot;Ein Morgen mit Kaffee, Ruhe ringsum und dem Gefühl, dass die Zeit für einen Moment langsamer wird.&quot;"
-            >
-              "Poranek z kawą, cisza wokół i wrażenie, że czas na chwilę zwolnił."
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal">
-        <div class="container feature-grid">
-          <article class="feature-card">
-            <h3 data-pl="Cisza i przestrzeń" data-de="Ruhe und Weite">Cisza i przestrzeń</h3>
-            <p
-              data-pl="Idealne miejsce na weekend lub kilka dni bez pośpiechu, z porankami w zieleni i spokojnymi wieczorami."
-              data-de="Ideal für ein Wochenende oder einige Tage ohne Eile, mit grüner Morgenstimmung und ruhigen Abenden."
-            >
-              Idealne miejsce na weekend lub kilka dni bez pośpiechu, z porankami w zieleni i spokojnymi wieczorami.
-            </p>
-          </article>
-          <article class="feature-card">
-            <h3 data-pl="Blisko natury" data-de="Nah an der Natur">Blisko natury</h3>
-            <p
-              data-pl="Otoczenie sprzyja spacerom, odpoczynkowi na świeżym powietrzu i zwykłemu byciu tu i teraz."
-              data-de="Die Umgebung lädt zu Spaziergängen, frischer Luft und bewusstem Innehalten ein."
-            >
-              Otoczenie sprzyja spacerom, odpoczynkowi na świeżym powietrzu i zwykłemu byciu tu i teraz.
-            </p>
-          </article>
-          <article class="feature-card">
-            <h3 data-pl="Kameralny pobyt" data-de="Persönlicher Aufenthalt">Kameralny pobyt</h3>
-            <p
-              data-pl="Miejsce dla gości, którzy szukają prostego standardu, przyjaznej atmosfery i autentycznego klimatu."
-              data-de="Ein Ort für Gäste, die einen einfachen Standard, freundliche Atmosphäre und authentischen Charakter suchen."
-            >
-              Miejsce dla gości, którzy szukają prostego standardu, przyjaznej atmosfery i autentycznego klimatu.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-accent reveal" id="pobyt">
-        <div class="container stay-grid">
+        <div class="container stay-grid stay-grid--merged">
           <div class="stay-copy">
             <p class="section-label" data-pl="Pobyt" data-de="Aufenthalt">Pobyt</p>
-            <h2 data-pl="Dla kogo jest Greenrest" data-de="Für wen Greenrest gedacht ist">Dla kogo jest Greenrest</h2>
+            <h2 data-pl="Dla kogo jest Greenrest" data-de="Fuer wen Greenrest gedacht ist">Dla kogo jest Greenrest</h2>
             <div class="offer-list">
               <div class="offer-item">
                 <span class="offer-number">01</span>
                 <div>
-                  <h3 data-pl="Dla par i rodzin" data-de="Für Paare und Familien">Dla par i rodzin</h3>
+                  <h3 data-pl="Dla par i rodzin" data-de="Fuer Paare und Familien">Dla par i rodzin</h3>
                   <p
                     data-pl="Na spokojny wyjazd, odpoczynek od miasta i czas razem bez rozpraszaczy."
-                    data-de="Für eine ruhige Reise, Abstand vom Stadtleben und gemeinsame Zeit ohne Ablenkung."
+                    data-de="Fuer eine ruhige Reise, Abstand vom Stadtleben und gemeinsame Zeit ohne Ablenkung."
                   >
                     Na spokojny wyjazd, odpoczynek od miasta i czas razem bez rozpraszaczy.
                   </p>
@@ -201,12 +136,12 @@
               <div class="offer-item">
                 <span class="offer-number">02</span>
                 <div>
-                  <h3 data-pl="Dla osób szukających ciszy" data-de="Für Menschen auf der Suche nach Ruhe">
-                    Dla osób szukających ciszy
+                  <h3 data-pl="Dla osob szukajacych ciszy" data-de="Fuer Menschen auf der Suche nach Ruhe">
+                    Dla osob szukajacych ciszy
                   </h3>
                   <p
                     data-pl="Na reset, czytanie, spacery i wolniejsze tempo dnia."
-                    data-de="Zum Abschalten, Lesen, Spazieren und für ein langsameres Tagestempo."
+                    data-de="Zum Abschalten, Lesen, Spazieren und fuer ein langsameres Tagestempo."
                   >
                     Na reset, czytanie, spacery i wolniejsze tempo dnia.
                   </p>
@@ -215,14 +150,15 @@
               <div class="offer-item">
                 <span class="offer-number">03</span>
                 <div>
-                  <h3 data-pl="Dla gości z Niemiec i Polski" data-de="Für Gäste aus Deutschland und Polen">
-                    Dla gości z Niemiec i Polski
+                  <h3 data-pl="Dla gosci z Niemiec i Polski" data-de="Fuer Gaeste aus Deutschland und Polen">
+                    Dla gosci z Niemiec i Polski
                   </h3>
                   <p
-                    data-pl="Dwujęzyczna strona ułatwia pierwszy kontakt i rezerwację."
-                    data-de="Die zweisprachige Seite erleichtert den ersten Kontakt und die Reservierungsanfrage."
+                    data-pl="Dwujezyczna strona ulatwia pierwszy kontakt, rezerwacje i szybkie znalezienie najwazniejszych informacji."
+                    data-de="Die zweisprachige Seite erleichtert den ersten Kontakt, die Buchung und den schnellen Zugang zu den wichtigsten Informationen."
                   >
-                    Dwujęzyczna strona ułatwia pierwszy kontakt i rezerwację.
+                    Dwujezyczna strona ulatwia pierwszy kontakt, rezerwacje i szybkie znalezienie najwazniejszych
+                    informacji.
                   </p>
                 </div>
               </div>
@@ -231,20 +167,93 @@
 
           <aside class="info-panel">
             <p class="info-kicker" data-pl="Na start" data-de="Zum Start">Na start</p>
-            <h3 data-pl="Co warto uzupełnić później" data-de="Was später noch ergänzt werden sollte">
-              Co warto uzupełnić później
+            <h3 data-pl="Co warto sprawdzic przed przyjazdem" data-de="Was sich vor der Anreise lohnt">
+              Co warto sprawdzic przed przyjazdem
             </h3>
             <ul>
-              <li data-pl="dokładny adres i region" data-de="genaue Adresse und Region">dokładny adres i region</li>
-              <li data-pl="telefon, e-mail i link do social media" data-de="Telefon, E-Mail und Social-Media-Link">
-                telefon, e-mail i link do social media
+              <li data-pl="aktualnosci o miejscu i sezonie" data-de="Neuigkeiten zu Ort und Saison">
+                aktualnosci o miejscu i sezonie
               </li>
-              <li data-pl="cennik lub zasady rezerwacji" data-de="Preise oder Reservierungsregeln">
-                cennik lub zasady rezerwacji
+              <li data-pl="mozliwosc wypozyczenia e-bike'a" data-de="Moeglichkeit, ein E-Bike zu mieten">
+                mozliwosc wypozyczenia e-bike'a
               </li>
-              <li data-pl="pełne dane do Impressum" data-de="vollständige Impressum-Daten">pełne dane do Impressum</li>
+              <li data-pl="rezerwacje przez Booking.com" data-de="Buchung ueber Booking.com">
+                rezerwacje przez Booking.com
+              </li>
+              <li data-pl="bezposredni kontakt w razie pytan" data-de="direkter Kontakt bei Fragen">
+                bezposredni kontakt w razie pytan
+              </li>
             </ul>
+            <div class="info-actions">
+              <button class="btn btn-secondary-solid" type="button" data-open-news>
+                <span data-pl="Otworz aktualnosci" data-de="Neuigkeiten oeffnen">Otworz aktualnosci</span>
+              </button>
+              <button class="btn btn-secondary-solid" type="button" data-open-bike>
+                <span data-pl="Zobacz Rent a Bike" data-de="Rent a Bike ansehen">Zobacz Rent a Bike</span>
+              </button>
+            </div>
           </aside>
+        </div>
+      </section>
+
+      <section class="section scenic-band reveal">
+        <div class="container scenic-grid">
+          <div class="scenic-copy">
+            <p class="section-label" data-pl="Atmosfera" data-de="Atmosphaere">Atmosfera</p>
+            <h2
+              data-pl="Nie kolejny nocleg, tylko nastrojowy wyjazd z charakterem"
+              data-de="Nicht nur eine Unterkunft, sondern ein stimmungsvoller Aufenthalt mit Charakter"
+            >
+              Nie kolejny nocleg, tylko nastrojowy wyjazd z charakterem
+            </h2>
+            <p
+              data-pl="Tutaj najwieksze wrazenie robi prostota: swiatlo, zielen, spokoj i naturalny rytm dnia. To wlasnie buduje klimat Greenrest."
+              data-de="Hier entsteht der staerkste Eindruck durch Einfachheit: Licht, Gruen, Ruhe und ein natuerlicher Tagesrhythmus. Genau das bildet den Charakter von Greenrest."
+            >
+              Tutaj najwieksze wrazenie robi prostota: swiatlo, zielen, spokoj i naturalny rytm dnia. To wlasnie buduje
+              klimat Greenrest.
+            </p>
+          </div>
+          <div class="scenic-quote">
+            <p
+              data-pl="&quot;Poranek z kawa, cisza wokol i wrazenie, ze czas na chwile zwolnil.&quot;"
+              data-de="&quot;Ein Morgen mit Kaffee, Ruhe ringsum und dem Gefuehl, dass die Zeit fuer einen Moment langsamer wird.&quot;"
+            >
+              "Poranek z kawa, cisza wokol i wrazenie, ze czas na chwile zwolnil."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="container feature-grid">
+          <article class="feature-card">
+            <h3 data-pl="Cisza i przestrzen" data-de="Ruhe und Weite">Cisza i przestrzen</h3>
+            <p
+              data-pl="Idealne miejsce na weekend lub kilka dni bez pospiechu, z porankami w zieleni i spokojnymi wieczorami."
+              data-de="Ideal fuer ein Wochenende oder einige Tage ohne Eile, mit gruener Morgenstimmung und ruhigen Abenden."
+            >
+              Idealne miejsce na weekend lub kilka dni bez pospiechu, z porankami w zieleni i spokojnymi wieczorami.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3 data-pl="Blisko natury" data-de="Nah an der Natur">Blisko natury</h3>
+            <p
+              data-pl="Otoczenie sprzyja spacerom, odpoczynkowi na swiezym powietrzu i zwyklemu byciu tu i teraz."
+              data-de="Die Umgebung laedt zu Spaziergaengen, frischer Luft und bewusstem Innehalten ein."
+            >
+              Otoczenie sprzyja spacerom, odpoczynkowi na swiezym powietrzu i zwyklemu byciu tu i teraz.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3 data-pl="Kameralny pobyt" data-de="Persoenlicher Aufenthalt">Kameralny pobyt</h3>
+            <p
+              data-pl="Miejsce dla gosci, ktorzy szukaja prostego standardu, przyjaznej atmosfery i autentycznego klimatu."
+              data-de="Ein Ort fuer Gaeste, die einen einfachen Standard, freundliche Atmosphaere und authentischen Charakter suchen."
+            >
+              Miejsce dla gosci, ktorzy szukaja prostego standardu, przyjaznej atmosfery i autentycznego klimatu.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -254,31 +263,31 @@
             <div>
               <p class="section-label" data-pl="Okolica" data-de="Umgebung">Okolica</p>
               <h2
-                data-pl="Greenrest blisko 54614 Schönecken, w sercu spokojnej części Eifel"
-                data-de="Greenrest nahe 54614 Schönecken, im ruhigen Teil der Eifel"
+                data-pl="Greenrest blisko 54614 Schoenecken, w sercu spokojnej czesci Eifel"
+                data-de="Greenrest nahe 54614 Schoenecken, im ruhigen Teil der Eifel"
               >
-                Greenrest blisko 54614 Schönecken, w sercu spokojnej części Eifel
+                Greenrest blisko 54614 Schoenecken, w sercu spokojnej czesci Eifel
               </h2>
             </div>
             <p
-              data-pl="To dobra baza wypadowa dla gości, którzy chcą połączyć odpoczynek z lekkim zwiedzaniem. Schönecken ma ładny historyczny charakter, trasy spacerowe i dostęp do natury bez tłoku."
-              data-de="Das ist ein guter Ausgangspunkt für Gäste, die Erholung mit leichtem Entdecken verbinden möchten. Schönecken hat historischen Charakter, Spazierwege und naturnahe Ausflugsziele ohne großes Gedränge."
+              data-pl="To dobra baza wypadowa dla gosci, ktorzy chca polaczyc odpoczynek z lekkim zwiedzaniem. Schoenecken ma historyczny charakter, trasy spacerowe i dostep do natury bez tloku."
+              data-de="Das ist ein guter Ausgangspunkt fuer Gaeste, die Erholung mit leichtem Entdecken verbinden moechten. Schoenecken hat historischen Charakter, Spazierwege und naturnahe Ausflugsziele ohne Gedraenge."
             >
-              To dobra baza wypadowa dla gości, którzy chcą połączyć odpoczynek z lekkim zwiedzaniem. Schönecken ma
-              ładny historyczny charakter, trasy spacerowe i dostęp do natury bez tłoku.
+              To dobra baza wypadowa dla gosci, ktorzy chca polaczyc odpoczynek z lekkim zwiedzaniem. Schoenecken ma
+              historyczny charakter, trasy spacerowe i dostep do natury bez tloku.
             </p>
           </div>
 
           <div class="discover-grid">
             <article class="discover-card">
               <span class="discover-tag" data-pl="na miejscu" data-de="direkt vor Ort">na miejscu</span>
-              <h3 data-pl="Burgruine Schönecken" data-de="Burgruine Schönecken">Burgruine Schönecken</h3>
+              <h3 data-pl="Burgruine Schoenecken" data-de="Burgruine Schoenecken">Burgruine Schoenecken</h3>
               <p
-                data-pl="Ruiny zamku nad miejscowością są jednym z najbardziej charakterystycznych punktów okolicy i dają klimatyczny widok na dolinę Nims."
-                data-de="Die Burgruine über dem Ort gehört zu den markantesten Punkten der Umgebung und bietet einen stimmungsvollen Blick ins Nimstal."
+                data-pl="Ruiny zamku nad miejscowoscia sa jednym z najbardziej charakterystycznych punktow okolicy i daja klimatyczny widok na doline Nims."
+                data-de="Die Burgruine ueber dem Ort gehoert zu den markantesten Punkten der Umgebung und bietet einen stimmungsvollen Blick ins Nimstal."
               >
-                Ruiny zamku nad miejscowością są jednym z najbardziej charakterystycznych punktów okolicy i dają
-                klimatyczny widok na dolinę Nims.
+                Ruiny zamku nad miejscowoscia sa jednym z najbardziej charakterystycznych punktow okolicy i daja
+                klimatyczny widok na doline Nims.
               </p>
             </article>
 
@@ -286,40 +295,40 @@
               <span class="discover-tag" data-pl="spacer i widoki" data-de="Spaziergang und Aussicht">
                 spacer i widoki
               </span>
-              <h3 data-pl="Panoramaweg Schönecken" data-de="Panoramaweg Schönecken">Panoramaweg Schönecken</h3>
+              <h3 data-pl="Panoramaweg Schoenecken" data-de="Panoramaweg Schoenecken">Panoramaweg Schoenecken</h3>
               <p
-                data-pl="Oficjalnie opisywana trasa panoramiczna prowadzi przez widokowe odcinki, okolice ruin i krajobrazy Schönecker Schweiz."
-                data-de="Der offizielle Panoramaweg führt durch Aussichtspunkte, an der Burgruine vorbei und durch die Landschaft der Schönecker Schweiz."
+                data-pl="Oficjalnie opisywana trasa panoramiczna prowadzi przez widokowe odcinki, okolice ruin i krajobrazy Schoenecker Schweiz."
+                data-de="Der offizielle Panoramaweg fuehrt durch Aussichtspunkte, an der Burgruine vorbei und durch die Landschaft der Schoenecker Schweiz."
               >
                 Oficjalnie opisywana trasa panoramiczna prowadzi przez widokowe odcinki, okolice ruin i krajobrazy
-                Schönecker Schweiz.
+                Schoenecker Schweiz.
               </p>
             </article>
 
             <article class="discover-card">
               <span class="discover-tag" data-pl="natura" data-de="Natur">natura</span>
-              <h3 data-pl="Schönecker Schweiz i dolina Altburgtal" data-de="Schönecker Schweiz und Altburgtal">
-                Schönecker Schweiz i dolina Altburgtal
+              <h3 data-pl="Schoenecker Schweiz i dolina Altburgtal" data-de="Schoenecker Schweiz und Altburgtal">
+                Schoenecker Schweiz i dolina Altburgtal
               </h3>
               <p
-                data-pl="Okolica znana jest z formacji skalnych, tras pieszych, roślinności i spokojnego krajobrazu Eifel."
-                data-de="Die Umgebung ist bekannt für Felsformationen, Wanderwege, besondere Pflanzenwelt und die ruhige Eifel-Landschaft."
+                data-pl="Okolica znana jest z formacji skalnych, tras pieszych, roslinnosci i spokojnego krajobrazu Eifel."
+                data-de="Die Umgebung ist bekannt fuer Felsformationen, Wanderwege, besondere Pflanzenwelt und die ruhige Eifel-Landschaft."
               >
-                Okolica znana jest z formacji skalnych, tras pieszych, roślinności i spokojnego krajobrazu Eifel.
+                Okolica znana jest z formacji skalnych, tras pieszych, roslinnosci i spokojnego krajobrazu Eifel.
               </p>
             </article>
 
             <article class="discover-card">
-              <span class="discover-tag" data-pl="na dalszy wypad" data-de="für einen größeren Ausflug">
+              <span class="discover-tag" data-pl="na dalszy wypad" data-de="fuer einen groesseren Ausflug">
                 na dalszy wypad
               </span>
               <h3 data-pl="Teufelsschlucht" data-de="Teufelsschlucht">Teufelsschlucht</h3>
               <p
-                data-pl="Jeśli goście chcą zobaczyć bardziej spektakularne formacje skalne w regionie, Teufelsschlucht jest jednym z najbardziej znanych celów w Eifel."
-                data-de="Wenn Gäste markantere Felslandschaften der Region sehen möchten, ist die Teufelsschlucht eines der bekanntesten Ziele in der Eifel."
+                data-pl="Jesli goscie chca zobaczyc bardziej spektakularne formacje skalne w regionie, Teufelsschlucht jest jednym z najbardziej znanych celow w Eifel."
+                data-de="Wenn Gaeste markantere Felslandschaften der Region sehen moechten, ist die Teufelsschlucht eines der bekanntesten Ziele in der Eifel."
               >
-                Jeśli goście chcą zobaczyć bardziej spektakularne formacje skalne w regionie, Teufelsschlucht jest
-                jednym z najbardziej znanych celów w Eifel.
+                Jesli goscie chca zobaczyc bardziej spektakularne formacje skalne w regionie, Teufelsschlucht jest
+                jednym z najbardziej znanych celow w Eifel.
               </p>
             </article>
           </div>
@@ -327,26 +336,26 @@
           <div class="map-panel">
             <div>
               <p class="section-label" data-pl="Dojazd" data-de="Anfahrt">Dojazd</p>
-              <h3 data-pl="Otwórz lokalizację w Google Maps" data-de="Standort in Google Maps öffnen">
-                Otwórz lokalizację w Google Maps
+              <h3 data-pl="Otworz lokalizacje w Google Maps" data-de="Standort in Google Maps oeffnen">
+                Otworz lokalizacje w Google Maps
               </h3>
               <p
-                data-pl="Na razie link prowadzi do Schönecken 54614. Gdy podasz dokładny adres Greenrest, podmienię go na precyzyjną pinezkę."
-                data-de="Aktuell führt der Link zu Schönecken 54614. Sobald du die genaue Greenrest-Adresse gibst, ersetze ich ihn durch einen exakten Kartenpin."
+                data-pl="Na razie link prowadzi do Schoenecken 54614. Gdy podasz dokladny adres Greenrest, podmienie go na precyzyjna pinezke."
+                data-de="Aktuell fuehrt der Link zu Schoenecken 54614. Sobald du die genaue Greenrest-Adresse gibst, ersetze ich ihn durch einen exakten Kartenpin."
               >
-                Na razie link prowadzi do Schönecken 54614. Gdy podasz dokładny adres Greenrest, podmienię go na
-                precyzyjną pinezkę.
+                Na razie link prowadzi do Schoenecken 54614. Gdy podasz dokladny adres Greenrest, podmienie go na
+                precyzyjna pinezke.
               </p>
             </div>
             <a
               class="btn btn-primary"
-              href="https://www.google.com/maps/search/?api=1&query=54614+Sch%C3%B6necken"
+              href="https://www.google.com/maps/search/?api=1&query=54614+Schoenecken"
               target="_blank"
               rel="noopener noreferrer"
-              data-pl="Otwórz Google Maps"
-              data-de="Google Maps öffnen"
+              data-pl="Otworz Google Maps"
+              data-de="Google Maps oeffnen"
             >
-              Otwórz Google Maps
+              Otworz Google Maps
             </a>
           </div>
         </div>
@@ -359,23 +368,17 @@
             <div class="gallery-hero-card__overlay"></div>
             <div class="gallery-hero-card__content">
               <p class="section-label section-label--light" data-pl="Galeria" data-de="Galerie">Galeria</p>
-              <h2 data-pl="Zobacz Greenrest na zdjęciach" data-de="Greenrest in Bildern entdecken">
-                Zobacz Greenrest na zdjęciach
+              <h2 data-pl="Zobacz Greenrest na zdjeciach" data-de="Greenrest in Bildern entdecken">
+                Zobacz Greenrest na zdjeciach
               </h2>
               <p
-                data-pl="Otwórz pełną galerię i przechodź między zdjęciami strzałkami."
-                data-de="Öffne die volle Galerie und wechsle mit den Pfeilen zwischen den Bildern."
+                data-pl="Otworz pelna galerie i przechodz miedzy zdjeciami strzalkami."
+                data-de="Oeffne die volle Galerie und wechsle mit den Pfeilen zwischen den Bildern."
               >
-                Otwórz pełną galerię i przechodź między zdjęciami strzałkami.
+                Otworz pelna galerie i przechodz miedzy zdjeciami strzalkami.
               </p>
-              <button
-                class="btn btn-primary"
-                type="button"
-                id="openGallery"
-                data-pl="Otwórz galerię"
-                data-de="Galerie öffnen"
-              >
-                Otwórz galerię
+              <button class="btn btn-primary" type="button" id="openGallery" data-pl="Otworz galerie" data-de="Galerie oeffnen">
+                Otworz galerie
               </button>
             </div>
           </div>
@@ -383,100 +386,110 @@
       </section>
 
       <section class="section booking-section reveal" id="zarezerwuj">
-        <div class="container booking-shell">
-          <div class="booking-intro">
+        <div class="container booking-shell booking-shell--single">
+          <div class="booking-intro booking-intro--single">
             <p class="section-label" data-pl="Rezerwacja" data-de="Reservierung">Rezerwacja</p>
             <h2
-              data-pl="Wybierz termin pobytu w prostym kalendarzu"
-              data-de="Waehle deinen Aufenthalt im einfachen Kalender"
+              data-pl="Zarezerwuj pobyt bezposrednio na Booking.com"
+              data-de="Buche deinen Aufenthalt direkt auf Booking.com"
             >
-              Wybierz termin pobytu w prostym kalendarzu
+              Zarezerwuj pobyt bezposrednio na Booking.com
             </h2>
-            <p
-              data-pl="Najpierw wybierz przyjazd i wyjazd, potem przejdz dalej do kontaktu lub kalendarza. Calosc dziala lekko i czysto, bez ciezkiego systemu rezerwacji."
-              data-de="Waehle zuerst An- und Abreise, danach gehst du weiter zum Kontakt oder Kalender. Alles bleibt leicht und klar, ohne schweres Buchungssystem."
-            >
-              Najpierw wybierz przyjazd i wyjazd, potem przejdz dalej do kontaktu lub kalendarza. Calosc dziala lekko i
-              czysto, bez ciezkiego systemu rezerwacji.
-            </p>
-            <div class="booking-actions">
-              <button
-                class="btn btn-primary"
-                type="button"
-                id="openBooking"
-                data-pl="Otworz kalendarz"
-                data-de="Kalender oeffnen"
-              >
-                Otworz kalendarz
-              </button>
-              <a class="btn btn-secondary" href="#kontakt" data-pl="Przejdz do kontaktu" data-de="Zum Kontakt">
-                Przejdz do kontaktu
-              </a>
-            </div>
+            <a class="btn btn-booking btn-booking--with-logo" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
+              <img src="assets/booking.png" alt="Booking.com" class="btn-booking__logo" />
+              <span data-pl="Zarezerwuj pobyt bezposrednio na Booking.com" data-de="Buche deinen Aufenthalt direkt auf Booking.com">
+                Zarezerwuj pobyt bezposrednio na Booking.com
+              </span>
+            </a>
           </div>
-
-          <aside class="booking-panel">
-            <p class="info-kicker" data-pl="Twoj pobyt" data-de="Dein Aufenthalt">Twoj pobyt</p>
-            <div class="booking-summary">
-              <div class="booking-summary__item">
-                <span data-pl="Przyjazd" data-de="Anreise">Przyjazd</span>
-                <strong id="bookingStartLabel">--</strong>
-              </div>
-              <div class="booking-summary__item">
-                <span data-pl="Wyjazd" data-de="Abreise">Wyjazd</span>
-                <strong id="bookingEndLabel">--</strong>
-              </div>
-              <div class="booking-summary__item">
-                <span data-pl="Liczba nocy" data-de="Naechte">Liczba nocy</span>
-                <strong id="bookingNightsLabel" data-pl="Wybierz daty" data-de="Waehle Daten">Wybierz daty</strong>
-              </div>
-            </div>
-            <div class="booking-pills">
-              <span class="booking-chip" data-pl="Spokojny pobyt" data-de="Ruhiger Aufenthalt">Spokojny pobyt</span>
-              <span class="booking-chip" data-pl="Elastyczny wybor" data-de="Flexible Auswahl">Elastyczny wybor</span>
-              <span class="booking-chip" data-pl="Bezposredni kontakt" data-de="Direkter Kontakt">Bezposredni kontakt</span>
-            </div>
-          </aside>
         </div>
       </section>
 
       <section class="section contact-section reveal" id="kontakt">
         <div class="container contact-box">
-          <div>
+          <div class="contact-copy">
             <p class="section-label" data-pl="Kontakt" data-de="Kontakt">Kontakt</p>
-            <h2 data-pl="Kalendarz i kontakt" data-de="Kalender und Kontakt">Kalendarz i kontakt</h2>
+            <h2 data-pl="Booking.com, kontakt i WhatsApp" data-de="Booking.com, Kontakt und WhatsApp">
+              Booking.com, kontakt i WhatsApp
+            </h2>
             <p
-              data-pl="To jest pierwsza wersja strony, dlatego dane kontaktowe są jeszcze tymczasowe. Po podaniu prawdziwych danych podmienię je od razu."
-              data-de="Dies ist die erste Version der Seite, deshalb sind die Kontaktdaten noch provisorisch. Sobald du die echten Daten gibst, ersetze ich sie direkt."
+              class="contact-description"
+              data-pl="Rezerwacje sa obslugiwane przez Booking.com, a w sprawie pytan o pobyt lub szczegoly miejsca mozna szybko wyslac wiadomosc przez WhatsApp albo skontaktowac sie bezposrednio mailowo."
+              data-de="Reservierungen laufen ueber Booking.com. Bei Fragen zum Aufenthalt oder zu Details vor Ort kann man schnell eine Nachricht per WhatsApp senden oder direkt per E-Mail Kontakt aufnehmen."
             >
-              To jest pierwsza wersja strony, dlatego dane kontaktowe są jeszcze tymczasowe. Po podaniu prawdziwych
-              danych podmienię je od razu.
+              Rezerwacje sa obslugiwane przez Booking.com, a w sprawie pytan o pobyt lub szczegoly miejsca mozna szybko
+              wyslac wiadomosc przez WhatsApp albo skontaktowac sie bezposrednio mailowo.
             </p>
           </div>
-          <div class="contact-actions">
-            <button
-              class="btn btn-primary"
-              type="button"
-              id="openBookingContact"
-              data-pl="Wybierz termin"
-              data-de="Termin waehlen"
-            >
-              Wybierz termin
-            </button>
-            <a class="btn btn-secondary btn-secondary-solid" href="mailto:kontakt@greenrest.example">
-              kontakt@greenrest.example
-            </a>
-            <p class="contact-note" data-pl="Telefon: do uzupełnienia" data-de="Telefon: noch zu ergänzen">
-              Telefon: do uzupełnienia
-            </p>
+          <div class="contact-panel">
+            <div class="contact-actions">
+              <div class="contact-compose">
+                <div class="contact-message-box">
+                  <label class="contact-label" for="whatsAppMessage" data-pl="Krotka wiadomosc" data-de="Kurze Nachricht">
+                    Krotka wiadomosc
+                  </label>
+                  <textarea
+                    id="whatsAppMessage"
+                    class="contact-message-input"
+                    rows="3"
+                    data-placeholder-pl="Napisz, o jaki pobyt lub termin chcesz zapytac..."
+                    data-placeholder-de="Schreibe, nach welchem Aufenthalt oder Termin du fragen moechtest..."
+                  ></textarea>
+                </div>
+                <a
+                  class="btn btn-whatsapp"
+                  id="whatsAppButton"
+                  href="https://wa.me/491234567890"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="assets/whatsapp.png" alt="WhatsApp" class="btn-whatsapp__icon" />
+                  <span data-pl="Napisz na WhatsApp" data-de="Per WhatsApp schreiben">Napisz na WhatsApp</span>
+                </a>
+              </div>
+
+              <div class="contact-secondary">
+                <a class="btn btn-booking btn-booking-soft" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
+                  <span data-pl="Rezerwuj na Booking.com" data-de="Auf Booking.com buchen">Rezerwuj na Booking.com</span>
+                </a>
+                <div class="contact-details">
+                  <a class="contact-detail" href="mailto:kontakt@greenrest.example">
+                    <span class="contact-detail__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+                        <path d="M3 6.75h18v10.5H3z" fill="none" stroke="currentColor" stroke-width="1.7" />
+                        <path d="M4.5 8.25 12 13.5l7.5-5.25" fill="none" stroke="currentColor" stroke-width="1.7" />
+                      </svg>
+                    </span>
+                    <span class="contact-detail__text">kontakt@greenrest.example</span>
+                  </a>
+                  <div class="contact-detail">
+                    <span class="contact-detail__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+                        <path
+                          d="M7.6 4.5h3l1.1 3.6-1.7 1.7a13.5 13.5 0 0 0 4.2 4.2l1.7-1.7 3.6 1.1v3c0 .6-.4 1-1 1A14.9 14.9 0 0 1 6.5 5.5c0-.6.4-1 1.1-1Z"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.7"
+                        />
+                      </svg>
+                    </span>
+                    <span class="contact-detail__text" data-pl="Telefon: do uzupelnienia" data-de="Telefon: noch zu ergaenzen">
+                      Telefon: do uzupelnienia
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
-
     <footer class="footer">
       <div class="container footer-inner">
-        <p>© <span id="year"></span> Greenrest</p>
+        <p>&copy; <span id="year"></span> Greenrest</p>
+        <button class="footer-link" type="button" data-open-impressum data-pl="Impressum" data-de="Impressum">
+          Impressum
+        </button>
         <a
           class="created-by"
           href="https://rado.it.com"
@@ -493,24 +506,24 @@
     <div class="modal" id="impressumModal" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="modal__backdrop" data-close-impressum></div>
       <div class="modal__content" role="document">
-        <button class="modal__close" type="button" data-close-impressum aria-label="Close">x</button>
+        <button class="modal__close" type="button" data-close-impressum aria-label="Close">&times;</button>
         <h2 data-pl="Impressum" data-de="Impressum">Impressum</h2>
         <p
           class="impressum-line"
-          data-pl="Uzupełnij poniższe dane przed publikacją, jeśli strona ma być publiczna."
-          data-de="Ergänze die folgenden Angaben vor der Veröffentlichung, wenn die Seite öffentlich sein soll."
+          data-pl="Uzupelnij ponizsze dane przed publikacja, jesli strona ma byc publiczna."
+          data-de="Ergaenze die folgenden Angaben vor der Veroeffentlichung, wenn die Seite oeffentlich sein soll."
         >
-          Uzupełnij poniższe dane przed publikacją, jeśli strona ma być publiczna.
+          Uzupelnij ponizsze dane przed publikacja, jesli strona ma byc publiczna.
         </p>
         <p class="impressum-line">Greenrest</p>
-        <p class="impressum-line" data-pl="Adres: do uzupełnienia" data-de="Adresse: noch zu ergänzen">
-          Adres: do uzupełnienia
+        <p class="impressum-line" data-pl="Adres: do uzupelnienia" data-de="Adresse: noch zu ergaenzen">
+          Adres: do uzupelnienia
         </p>
         <p class="impressum-line" data-pl="E-mail: kontakt@greenrest.example" data-de="E-Mail: kontakt@greenrest.example">
           E-mail: kontakt@greenrest.example
         </p>
-        <p class="impressum-line" data-pl="Telefon: do uzupełnienia" data-de="Telefon: noch zu ergänzen">
-          Telefon: do uzupełnienia
+        <p class="impressum-line" data-pl="Telefon: do uzupelnienia" data-de="Telefon: noch zu ergaenzen">
+          Telefon: do uzupelnienia
         </p>
       </div>
     </div>
@@ -518,7 +531,7 @@
     <div class="modal gallery-modal" id="galleryModal" aria-hidden="true" role="dialog" aria-modal="true">
       <div class="modal__backdrop" data-close-gallery></div>
       <div class="gallery-modal__content" role="document">
-        <button class="modal__close" type="button" data-close-gallery aria-label="Close">x</button>
+        <button class="modal__close" type="button" data-close-gallery aria-label="Close">&times;</button>
         <button class="gallery-nav gallery-nav--prev" type="button" id="galleryPrev" aria-label="Previous photo">
           &lsaquo;
         </button>
@@ -532,102 +545,96 @@
       </div>
     </div>
 
-    <div class="modal booking-modal" id="bookingModal" aria-hidden="true" role="dialog" aria-modal="true">
-      <div class="modal__backdrop" data-close-booking></div>
-      <div class="booking-modal__content" role="document">
-        <button class="modal__close" type="button" data-close-booking aria-label="Close">x</button>
-        <div class="booking-modal__header">
-          <div>
-            <p class="section-label" data-pl="Kalendarz pobytu" data-de="Aufenthaltskalender">Kalendarz pobytu</p>
-            <h2 data-pl="Wybierz przyjazd i wyjazd" data-de="Waehle Anreise und Abreise">
-              Wybierz przyjazd i wyjazd
-            </h2>
-          </div>
-          <div class="booking-modal__nav">
-            <button class="calendar-switch" type="button" id="bookingPrevMonth" aria-label="Previous month">&lsaquo;</button>
-            <strong id="bookingMonthLabel">May 2026</strong>
-            <button class="calendar-switch" type="button" id="bookingNextMonth" aria-label="Next month">&rsaquo;</button>
-          </div>
-        </div>
-
-        <div class="booking-weekdays">
-          <span data-pl="Pon" data-de="Mo">Pon</span>
-          <span data-pl="Wt" data-de="Di">Wt</span>
-          <span data-pl="Sr" data-de="Mi">Sr</span>
-          <span data-pl="Czw" data-de="Do">Czw</span>
-          <span data-pl="Pt" data-de="Fr">Pt</span>
-          <span data-pl="Sob" data-de="Sa">Sob</span>
-          <span data-pl="Nd" data-de="So">Nd</span>
-        </div>
-
-        <div class="booking-calendar" id="bookingCalendar"></div>
-
-        <div class="booking-modal__footer">
-          <div class="booking-modal__summary">
-            <p id="bookingSelectionText" data-pl="Wybierz daty pobytu" data-de="Waehle deine Aufenthaltsdaten">
-              Wybierz daty pobytu
+    <div class="modal" id="newsModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__backdrop" data-close-news></div>
+      <div class="modal__content news-modal__content" role="document">
+        <button class="modal__close" type="button" data-close-news aria-label="Close">&times;</button>
+        <div class="news-modal__grid">
+          <figure class="news-modal__media">
+            <img id="newsImage" src="assets/gallery-1.jpg" alt="Greenrest news" />
+          </figure>
+          <div class="news-modal__body">
+            <p class="section-label" data-pl="Aktualnosci" data-de="Neuigkeiten">Aktualnosci</p>
+            <h2 id="newsTopic">Nowosci w Greenrest</h2>
+            <p class="news-modal__text" id="newsContent">
+              Greenrest przygotowuje kolejne aktualnosci dla gosci. Szczegoly mozna zmienic w pliku news.txt.
             </p>
+            <p class="news-modal__status" id="newsStatus"></p>
           </div>
-          <div class="booking-modal__actions">
-            <button
-              class="btn btn-secondary btn-secondary-solid"
-              type="button"
-              id="bookingReset"
-              data-pl="Wyczysc wybor"
-              data-de="Auswahl loeschen"
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="bikeModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__backdrop" data-close-bike></div>
+      <div class="modal__content bike-modal__content" role="document">
+        <button class="modal__close" type="button" data-close-bike aria-label="Close">&times;</button>
+        <div class="bike-modal__grid">
+          <figure class="bike-modal__media">
+            <img src="assets/ebike.jpg" alt="Rent a Bike at Greenrest" />
+          </figure>
+          <div class="bike-modal__body">
+            <p class="section-label" data-pl="Rent a Bike" data-de="Rent a Bike">Rent a Bike</p>
+            <h2 data-pl="Odkrywaj okolice Greenrest na e-bike'u" data-de="Entdecke die Greenrest-Umgebung mit dem E-Bike">
+              Odkrywaj okolice Greenrest na e-bike'u
+            </h2>
+            <p
+              class="bike-modal__text"
+              data-pl="Piekne okolice, swietne trasy rowerowe i mozliwosc wypozyczenia e-bike'a bezposrednio u nas sprawiaja, ze aktywny dzien mozna zaplanowac lekko i przyjemnie."
+              data-de="Die schoene Umgebung, starke Radwege und die Moeglichkeit, ein E-Bike direkt bei uns zu mieten, machen einen aktiven Tag leicht, entspannt und attraktiv."
             >
-              Wyczysc wybor
-            </button>
-            <button
-              class="btn btn-primary"
-              type="button"
-              id="bookingConfirm"
-              data-pl="Zapisz termin"
-              data-de="Termin speichern"
-            >
-              Zapisz termin
-            </button>
+              Piekne okolice, swietne trasy rowerowe i mozliwosc wypozyczenia e-bike'a bezposrednio u nas sprawiaja, ze
+              aktywny dzien mozna zaplanowac lekko i przyjemnie.
+            </p>
+            <div class="booking-pills">
+              <span class="booking-chip" data-pl="Trasy widokowe" data-de="Panorama-Routen">Trasy widokowe</span>
+              <span class="booking-chip" data-pl="E-bike na miejscu" data-de="E-Bike vor Ort">E-bike na miejscu</span>
+              <span class="booking-chip" data-pl="Aktywny wypoczynek" data-de="Aktive Erholung">Aktywny wypoczynek</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <script>
+      const bookingUrl = document.body.dataset.bookingUrl || "https://www.booking.com/";
       document.getElementById("year").textContent = new Date().getFullYear();
-      const footerCopyright = document.querySelector(".footer-inner p");
-      if (footerCopyright) {
-        footerCopyright.innerHTML = "&copy; <span id=\"year\"></span> Greenrest";
-        footerCopyright.querySelector("#year").textContent = new Date().getFullYear();
-      }
+      document.querySelectorAll("[data-booking-link]").forEach((link) => {
+        link.href = bookingUrl;
+      });
 
       const langButtons = document.querySelectorAll(".lang-btn");
       const translatable = document.querySelectorAll("[data-pl][data-de]");
       const menuToggle = document.querySelector(".menu-toggle");
       const mainMenu = document.getElementById("mainMenu");
       const menuBackdrop = document.querySelector(".menu-backdrop");
+      const whatsAppMessage = document.getElementById("whatsAppMessage");
+      const whatsAppButton = document.getElementById("whatsAppButton");
+
       const impressumModal = document.getElementById("impressumModal");
       const openImpressum = document.querySelectorAll("[data-open-impressum]");
       const closeImpressum = document.querySelectorAll("[data-close-impressum]");
+
       const galleryModal = document.getElementById("galleryModal");
       const openGallery = document.getElementById("openGallery");
       const closeGallery = document.querySelectorAll("[data-close-gallery]");
-      const bookingModal = document.getElementById("bookingModal");
-      const openBookingButtons = [document.getElementById("openBooking"), document.getElementById("openBookingContact")];
-      const closeBooking = document.querySelectorAll("[data-close-booking]");
-      const bookingCalendar = document.getElementById("bookingCalendar");
-      const bookingMonthLabel = document.getElementById("bookingMonthLabel");
-      const bookingSelectionText = document.getElementById("bookingSelectionText");
-      const bookingStartLabel = document.getElementById("bookingStartLabel");
-      const bookingEndLabel = document.getElementById("bookingEndLabel");
-      const bookingNightsLabel = document.getElementById("bookingNightsLabel");
-      const bookingPrevMonth = document.getElementById("bookingPrevMonth");
-      const bookingNextMonth = document.getElementById("bookingNextMonth");
-      const bookingReset = document.getElementById("bookingReset");
-      const bookingConfirm = document.getElementById("bookingConfirm");
       const galleryPrev = document.getElementById("galleryPrev");
       const galleryNext = document.getElementById("galleryNext");
       const galleryImage = document.getElementById("galleryImage");
       const galleryCaption = document.getElementById("galleryCaption");
+
+      const newsModal = document.getElementById("newsModal");
+      const openNews = document.querySelectorAll("[data-open-news]");
+      const closeNews = document.querySelectorAll("[data-close-news]");
+      const newsTopic = document.getElementById("newsTopic");
+      const newsContent = document.getElementById("newsContent");
+      const newsImage = document.getElementById("newsImage");
+      const newsStatus = document.getElementById("newsStatus");
+
+      const bikeModal = document.getElementById("bikeModal");
+      const openBike = document.querySelectorAll("[data-open-bike]");
+      const closeBike = document.querySelectorAll("[data-close-bike]");
+
       const galleryItems = [
         {
           src: "assets/hero.jpg",
@@ -650,7 +657,7 @@
           alt: "Zielone otoczenie Greenrest",
           caption: {
             pl: "Zielone otoczenie Greenrest",
-            de: "Grüne Umgebung von Greenrest",
+            de: "Gruene Umgebung von Greenrest",
           },
         },
         {
@@ -670,175 +677,34 @@
           },
         },
       ];
+
+      const defaultNewsData = {
+        topic: {
+          pl: "Nowosci w Greenrest",
+          de: "Neuigkeiten aus Greenrest",
+        },
+        content: {
+          pl: "Greenrest przygotowuje kolejne aktualnosci dla gosci. Szczegoly mozna zmienic w pliku news.txt.",
+          de: "Greenrest bereitet weitere Neuigkeiten fuer Gaeste vor. Die Inhalte lassen sich einfach in der Datei news.txt aendern.",
+        },
+        image: "assets/gallery-1.jpg",
+        imageAlt: {
+          pl: "Aktualnosc Greenrest",
+          de: "Greenrest Neuigkeit",
+        },
+      };
+
       let galleryIndex = 0;
-      let bookingViewDate = new Date(2026, 4, 1);
-      let bookingStart = null;
-      let bookingEnd = null;
-      const blockedDates = new Set(["2026-05-09", "2026-05-10", "2026-05-23", "2026-06-06", "2026-06-13"]);
-      const monthNames = {
-        pl: ["Styczen", "Luty", "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien", "Pazdziernik", "Listopad", "Grudzien"],
-        de: ["Januar", "Februar", "Maerz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"],
-      };
-      const weekdayNames = {
-        pl: ["Pon", "Wt", "Sr", "Czw", "Pt", "Sob", "Nd"],
-        de: ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"],
-      };
+      let newsData = defaultNewsData;
 
       function activeLanguage() {
         return document.documentElement.lang === "de" ? "de" : "pl";
       }
 
-      function dateKey(date) {
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, "0");
-        const day = String(date.getDate()).padStart(2, "0");
-        return `${year}-${month}-${day}`;
-      }
-
-      function normalizeDate(date) {
-        return new Date(date.getFullYear(), date.getMonth(), date.getDate());
-      }
-
-      function formatBookingDate(date, lang) {
-        if (!date) return "--";
-        const months = {
-          pl: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "paz", "lis", "gru"],
-          de: ["Jan", "Feb", "Maerz", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"],
-        };
-        return `${date.getDate()} ${months[lang][date.getMonth()]} ${date.getFullYear()}`;
-      }
-
-      function nightCount() {
-        if (!bookingStart || !bookingEnd) return 0;
-        return Math.round((bookingEnd - bookingStart) / 86400000);
-      }
-
-      function updateBookingSummary() {
-        const lang = activeLanguage();
-        if (bookingStartLabel) bookingStartLabel.textContent = formatBookingDate(bookingStart, lang);
-        if (bookingEndLabel) bookingEndLabel.textContent = formatBookingDate(bookingEnd, lang);
-
-        if (bookingNightsLabel) {
-          if (bookingStart && bookingEnd) {
-            const nights = nightCount();
-            bookingNightsLabel.textContent = lang === "de" ? `${nights} Naechte` : `${nights} nocy`;
-          } else {
-            bookingNightsLabel.textContent = lang === "de" ? "Waehle Daten" : "Wybierz daty";
-          }
-        }
-
-        if (bookingSelectionText) {
-          if (bookingStart && bookingEnd) {
-            bookingSelectionText.textContent =
-              lang === "de"
-                ? `${formatBookingDate(bookingStart, lang)} bis ${formatBookingDate(bookingEnd, lang)}`
-                : `${formatBookingDate(bookingStart, lang)} - ${formatBookingDate(bookingEnd, lang)}`;
-          } else if (bookingStart) {
-            bookingSelectionText.textContent =
-              lang === "de"
-                ? `Anreise: ${formatBookingDate(bookingStart, lang)}`
-                : `Przyjazd: ${formatBookingDate(bookingStart, lang)}`;
-          } else {
-            bookingSelectionText.textContent = lang === "de" ? "Waehle deine Aufenthaltsdaten" : "Wybierz daty pobytu";
-          }
-        }
-
-        if (bookingConfirm) {
-          bookingConfirm.disabled = !(bookingStart && bookingEnd);
-        }
-      }
-
-      function setBooking(open) {
-        if (!bookingModal) return;
-        bookingModal.classList.toggle("modal--open", open);
-        bookingModal.setAttribute("aria-hidden", String(!open));
-        if (open) renderBookingCalendar();
-      }
-
-      function resetBookingSelection() {
-        bookingStart = null;
-        bookingEnd = null;
-        updateBookingSummary();
-        renderBookingCalendar();
-      }
-
-      function selectBookingDate(rawDate) {
-        const selectedDate = normalizeDate(rawDate);
-        if (!bookingStart || (bookingStart && bookingEnd)) {
-          bookingStart = selectedDate;
-          bookingEnd = null;
-        } else if (selectedDate <= bookingStart) {
-          bookingStart = selectedDate;
-          bookingEnd = null;
-        } else {
-          bookingEnd = selectedDate;
-        }
-
-        updateBookingSummary();
-        renderBookingCalendar();
-      }
-
-      function renderBookingCalendar() {
-        if (!bookingCalendar || !bookingMonthLabel) return;
-
-        const lang = activeLanguage();
-        const today = normalizeDate(new Date());
-        const year = bookingViewDate.getFullYear();
-        const month = bookingViewDate.getMonth();
-        const firstDay = new Date(year, month, 1);
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-        const mondayOffset = (firstDay.getDay() + 6) % 7;
-
-        bookingMonthLabel.textContent = `${monthNames[lang][month]} ${year}`;
-        bookingCalendar.innerHTML = "";
-
-        for (let i = 0; i < mondayOffset; i += 1) {
-          const emptyCell = document.createElement("div");
-          emptyCell.className = "calendar-day--empty";
-          bookingCalendar.appendChild(emptyCell);
-        }
-
-        for (let day = 1; day <= daysInMonth; day += 1) {
-          const date = new Date(year, month, day);
-          const key = dateKey(date);
-          const weekdayIndex = (date.getDay() + 6) % 7;
-          const button = document.createElement("button");
-          button.type = "button";
-          button.className = "calendar-day";
-          button.innerHTML = `${day}<span>${weekdayNames[lang][weekdayIndex]}</span>`;
-
-          const isBlocked = blockedDates.has(key) || date < today;
-          const isStart = bookingStart && key === dateKey(bookingStart);
-          const isEnd = bookingEnd && key === dateKey(bookingEnd);
-          const isInRange = bookingStart && bookingEnd && date > bookingStart && date < bookingEnd;
-
-          if (isBlocked) {
-            button.classList.add("calendar-day--disabled");
-            button.disabled = true;
-          } else {
-            button.addEventListener("click", () => selectBookingDate(date));
-          }
-
-          if (isInRange) button.classList.add("calendar-day--in-range");
-          if (isStart || isEnd) button.classList.add("calendar-day--selected");
-
-          bookingCalendar.appendChild(button);
-        }
-      }
-
-      function setLanguage(lang) {
-        document.documentElement.lang = lang;
-        translatable.forEach((element) => {
-          element.textContent = element.dataset[lang];
-        });
-
-        langButtons.forEach((btn) => {
-          btn.classList.toggle("active", btn.dataset.lang === lang);
-        });
-
-        updateGalleryItem(galleryIndex);
-        updateBookingSummary();
-        renderBookingCalendar();
+      function toggleModal(modal, open) {
+        if (!modal) return;
+        modal.classList.toggle("modal--open", open);
+        modal.setAttribute("aria-hidden", String(!open));
       }
 
       function setMenu(open) {
@@ -849,29 +715,130 @@
       }
 
       function setImpressum(open) {
-        if (!impressumModal) return;
-        impressumModal.classList.toggle("modal--open", open);
-        impressumModal.setAttribute("aria-hidden", String(!open));
+        toggleModal(impressumModal, open);
       }
 
       function updateGalleryItem(index) {
         if (!galleryImage || !galleryCaption) return;
-        const activeLang = document.documentElement.lang === "de" ? "de" : "pl";
+        const lang = activeLanguage();
         const item = galleryItems[index];
         galleryImage.src = item.src;
         galleryImage.alt = item.alt;
-        galleryCaption.textContent = item.caption[activeLang];
+        galleryCaption.textContent = item.caption[lang];
       }
 
       function setGallery(open) {
-        if (!galleryModal) return;
-        galleryModal.classList.toggle("modal--open", open);
-        galleryModal.setAttribute("aria-hidden", String(!open));
+        toggleModal(galleryModal, open);
       }
 
       function changeGallery(step) {
         galleryIndex = (galleryIndex + step + galleryItems.length) % galleryItems.length;
         updateGalleryItem(galleryIndex);
+      }
+
+      function renderNewsContent(statusMessage = "") {
+        if (!newsTopic || !newsContent || !newsImage) return;
+        const lang = activeLanguage();
+        newsTopic.textContent = newsData.topic[lang];
+        newsContent.textContent = newsData.content[lang];
+        newsImage.src = newsData.image;
+        newsImage.alt = newsData.imageAlt[lang];
+        if (newsStatus) newsStatus.textContent = statusMessage;
+      }
+
+      function parseNewsText(rawText) {
+        const values = {};
+
+        rawText.split(/\r?\n/).forEach((line) => {
+          const trimmed = line.trim();
+          if (!trimmed || trimmed.startsWith("#")) return;
+
+          const separatorIndex = trimmed.indexOf("=");
+          if (separatorIndex === -1) return;
+
+          const key = trimmed.slice(0, separatorIndex).trim();
+          const value = trimmed.slice(separatorIndex + 1).trim().replace(/\\n/g, "\n");
+          values[key] = value;
+        });
+
+        return {
+          topic: {
+            pl: values.TopicPL || defaultNewsData.topic.pl,
+            de: values.TopicDE || defaultNewsData.topic.de,
+          },
+          content: {
+            pl: values.ContentPL || defaultNewsData.content.pl,
+            de: values.ContentDE || defaultNewsData.content.de,
+          },
+          image: values.Image || defaultNewsData.image,
+          imageAlt: {
+            pl: values.ImageAltPL || defaultNewsData.imageAlt.pl,
+            de: values.ImageAltDE || defaultNewsData.imageAlt.de,
+          },
+        };
+      }
+
+      async function loadNewsContent() {
+        const lang = activeLanguage();
+        const loadingMessage = lang === "de" ? "Lade Neuigkeiten..." : "Ladowanie aktualnosci...";
+        renderNewsContent(loadingMessage);
+
+        try {
+          const response = await fetch(`news.txt?ts=${Date.now()}`, { cache: "no-store" });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+          newsData = parseNewsText(await response.text());
+          renderNewsContent();
+        } catch (error) {
+          newsData = defaultNewsData;
+          const fallbackMessage =
+            lang === "de"
+              ? "Die Datei news.txt konnte nicht geladen werden."
+              : "Nie udalo sie wczytac pliku news.txt.";
+          renderNewsContent(fallbackMessage);
+        }
+      }
+
+      function setNews(open) {
+        toggleModal(newsModal, open);
+        if (open) loadNewsContent();
+      }
+
+      function setBike(open) {
+        toggleModal(bikeModal, open);
+      }
+
+      function updateLocalizedFields(lang) {
+        document.querySelectorAll("[data-placeholder-pl][data-placeholder-de]").forEach((element) => {
+          element.placeholder = lang === "de" ? element.dataset.placeholderDe : element.dataset.placeholderPl;
+        });
+      }
+
+      function updateWhatsAppLink() {
+        if (!whatsAppButton) return;
+
+        const phoneNumber = (document.body.dataset.whatsappNumber || "").replace(/\D/g, "");
+        const message = whatsAppMessage ? whatsAppMessage.value.trim() : "";
+        const encodedMessage = encodeURIComponent(message);
+        whatsAppButton.href = encodedMessage
+          ? `https://wa.me/${phoneNumber}?text=${encodedMessage}`
+          : `https://wa.me/${phoneNumber}`;
+      }
+
+      function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        translatable.forEach((element) => {
+          element.textContent = element.dataset[lang];
+        });
+
+        langButtons.forEach((button) => {
+          button.classList.toggle("active", button.dataset.lang === lang);
+        });
+
+        updateGalleryItem(galleryIndex);
+        renderNewsContent();
+        updateLocalizedFields(lang);
+        updateWhatsAppLink();
       }
 
       langButtons.forEach((button) => {
@@ -893,54 +860,42 @@
         menuBackdrop.addEventListener("click", () => setMenu(false));
       }
 
-      openImpressum.forEach((btn) => btn.addEventListener("click", () => setImpressum(true)));
-      closeImpressum.forEach((btn) => btn.addEventListener("click", () => setImpressum(false)));
+      openImpressum.forEach((button) => button.addEventListener("click", () => setImpressum(true)));
+      closeImpressum.forEach((button) => button.addEventListener("click", () => setImpressum(false)));
+
       if (openGallery) {
         openGallery.addEventListener("click", () => {
           updateGalleryItem(galleryIndex);
           setGallery(true);
         });
       }
-      openBookingButtons.filter(Boolean).forEach((button) => {
-        button.addEventListener("click", () => {
-          renderBookingCalendar();
-          setBooking(true);
-        });
-      });
-      closeGallery.forEach((btn) => btn.addEventListener("click", () => setGallery(false)));
-      closeBooking.forEach((btn) => btn.addEventListener("click", () => setBooking(false)));
+      closeGallery.forEach((button) => button.addEventListener("click", () => setGallery(false)));
+
+      openNews.forEach((button) => button.addEventListener("click", () => setNews(true)));
+      closeNews.forEach((button) => button.addEventListener("click", () => setNews(false)));
+
+      openBike.forEach((button) => button.addEventListener("click", () => setBike(true)));
+      closeBike.forEach((button) => button.addEventListener("click", () => setBike(false)));
+
       if (galleryPrev) {
         galleryPrev.addEventListener("click", () => changeGallery(-1));
       }
       if (galleryNext) {
         galleryNext.addEventListener("click", () => changeGallery(1));
       }
-      if (bookingPrevMonth) {
-        bookingPrevMonth.addEventListener("click", () => {
-          bookingViewDate = new Date(bookingViewDate.getFullYear(), bookingViewDate.getMonth() - 1, 1);
-          renderBookingCalendar();
-        });
-      }
-      if (bookingNextMonth) {
-        bookingNextMonth.addEventListener("click", () => {
-          bookingViewDate = new Date(bookingViewDate.getFullYear(), bookingViewDate.getMonth() + 1, 1);
-          renderBookingCalendar();
-        });
-      }
-      if (bookingReset) {
-        bookingReset.addEventListener("click", () => resetBookingSelection());
-      }
-      if (bookingConfirm) {
-        bookingConfirm.addEventListener("click", () => {
-          if (!(bookingStart && bookingEnd)) return;
-          setBooking(false);
-        });
+
+      if (whatsAppMessage) {
+        whatsAppMessage.addEventListener("input", () => updateWhatsAppLink());
       }
 
       document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") setImpressum(false);
-        if (event.key === "Escape") setGallery(false);
-        if (event.key === "Escape") setBooking(false);
+        if (event.key === "Escape") {
+          setImpressum(false);
+          setGallery(false);
+          setNews(false);
+          setBike(false);
+        }
+
         if (galleryModal && galleryModal.classList.contains("modal--open")) {
           if (event.key === "ArrowLeft") changeGallery(-1);
           if (event.key === "ArrowRight") changeGallery(1);
@@ -961,8 +916,10 @@
       );
 
       revealItems.forEach((item) => revealObserver.observe(item));
-      updateBookingSummary();
-      renderBookingCalendar();
+      updateGalleryItem(galleryIndex);
+      loadNewsContent();
+      updateLocalizedFields(activeLanguage());
+      updateWhatsAppLink();
     </script>
   </body>
 </html>
