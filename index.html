@@ -10,7 +10,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-booking-url="https://www.booking.com/" data-whatsapp-number="491234567890">
+  <body data-whatsapp-number="491234567890">
     <div class="page-glow page-glow-a" aria-hidden="true"></div>
     <div class="page-glow page-glow-b" aria-hidden="true"></div>
 
@@ -494,10 +494,6 @@
               </div>
 
               <div class="contact-secondary">
-                <a class="btn btn-booking btn-booking-soft btn-booking--icon" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
-                  <img src="assets/booking.png" alt="Booking.com" class="btn-booking__logo" />
-                  <span class="sr-only" data-pl="Rezerwuj na Booking.com" data-de="Auf Booking.com buchen">Rezerwuj na Booking.com</span>
-                </a>
                 <div class="contact-details">
                   <a class="contact-detail" href="mailto:kontakt@greenrest.example">
                     <span class="contact-detail__icon" aria-hidden="true">
@@ -645,11 +641,7 @@
     </div>
 
     <script>
-      const bookingUrl = document.body.dataset.bookingUrl || "https://www.booking.com/";
       document.getElementById("year").textContent = new Date().getFullYear();
-      document.querySelectorAll("[data-booking-link]").forEach((link) => {
-        link.href = bookingUrl;
-      });
 
       const langButtons = document.querySelectorAll(".lang-btn");
       const translatable = document.querySelectorAll("[data-pl][data-de]");
