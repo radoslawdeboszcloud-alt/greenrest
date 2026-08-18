@@ -40,6 +40,7 @@
             <button class="menu-link" type="button" data-open-bike data-pl="Rent a Bike" data-de="Rent a Bike">
               Rent a Bike
             </button>
+            <a href="#zarezerwuj" data-pl="Rezerwacja" data-de="Buchung">Rezerwacja</a>
             <a href="#kontakt" data-pl="Kontakt" data-de="Kontakt">Kontakt</a>
           </div>
 
@@ -76,9 +77,13 @@
           atmosfera, w ktorej mozna zwolnic tempo.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-booking btn-booking--icon" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
-            <img src="assets/booking.png" alt="Booking.com" class="btn-booking__logo" />
-            <span class="sr-only" data-pl="Rezerwuj na Booking.com" data-de="Auf Booking.com buchen">Rezerwuj na Booking.com</span>
+          <a
+            class="btn btn-primary"
+            href="#zarezerwuj"
+            data-pl="Sprawdz dostepnosc"
+            data-de="Verfuegbarkeit pruefen"
+          >
+            Sprawdz dostepnosc
           </a>
           <a class="btn btn-secondary" href="#galeria" data-pl="Zobacz miejsce" data-de="Ort ansehen">Zobacz miejsce</a>
         </div>
@@ -387,22 +392,63 @@
       </section>
 
       <section class="section booking-section reveal" id="zarezerwuj">
-        <div class="container booking-shell booking-shell--single">
-          <div class="booking-intro booking-intro--single">
-            <p class="section-label" data-pl="Rezerwacja" data-de="Reservierung">Rezerwacja</p>
-            <h2
-              data-pl="Zarezerwuj pobyt bezposrednio na Booking.com"
-              data-de="Buche deinen Aufenthalt direkt auf Booking.com"
+        <div class="container booking-shell booking-shell--demo">
+          <div class="booking-intro booking-intro--demo">
+            <div>
+              <p class="section-label" data-pl="Rezerwacja online" data-de="Online-Buchung">Rezerwacja online</p>
+              <h2
+                data-pl="Sprawdz dostepnosc i zarezerwuj pobyt"
+                data-de="Verfuegbarkeit pruefen und Aufenthalt buchen"
+              >
+                Sprawdz dostepnosc i zarezerwuj pobyt
+              </h2>
+              <p
+                class="booking-description"
+                data-pl="Ponizej testujemy bezposredni system rezerwacji Smoobu. Docelowa wersja zostanie polaczona z kalendarzem i cenami Greenrest."
+                data-de="Unten testen wir das direkte Smoobu-Buchungssystem. Die finale Version wird mit dem Kalender und den Preisen von Greenrest verbunden."
+              >
+                Ponizej testujemy bezposredni system rezerwacji Smoobu. Docelowa wersja zostanie polaczona z kalendarzem
+                i cenami Greenrest.
+              </p>
+            </div>
+            <span
+              class="booking-demo-badge"
+              data-pl="Wersja testowa Smoobu"
+              data-de="Smoobu-Testversion"
             >
-              Zarezerwuj pobyt bezposrednio na Booking.com
-            </h2>
-            <a class="btn btn-booking btn-booking--icon btn-booking--cta" href="https://www.booking.com/" target="_blank" rel="noopener noreferrer" data-booking-link>
-              <img src="assets/booking.png" alt="Booking.com" class="btn-booking__logo" />
-              <span class="sr-only" data-pl="Zarezerwuj pobyt bezposrednio na Booking.com" data-de="Buche deinen Aufenthalt direkt auf Booking.com">
-                Zarezerwuj pobyt bezposrednio na Booking.com
-              </span>
-            </a>
+              Wersja testowa Smoobu
+            </span>
           </div>
+
+          <div class="smoobu-widget" aria-label="Smoobu Booking Engine">
+            <div id="booking-tool-container-allApartments">
+              <script src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
+              <script>
+                BookingToolIframe.initialize({
+                  url: "https://login.smoobu.com/en/booking-tool/iframe/12532",
+                  baseUrl: "https://login.smoobu.com",
+                  target: "#booking-tool-container-allApartments",
+                });
+              </script>
+            </div>
+            <noscript>
+              <p
+                class="smoobu-widget__fallback"
+                data-pl="Aby wyswietlic formularz rezerwacji, wlacz JavaScript w przegladarce."
+                data-de="Aktiviere JavaScript im Browser, um das Buchungsformular anzuzeigen."
+              >
+                Aby wyswietlic formularz rezerwacji, wlacz JavaScript w przegladarce.
+              </p>
+            </noscript>
+          </div>
+
+          <p
+            class="booking-demo-note"
+            data-pl="To demonstracyjny formularz Smoobu z przykladowymi danymi. Nie skladaj w nim prawdziwej rezerwacji."
+            data-de="Dies ist ein Smoobu-Demoformular mit Beispieldaten. Bitte keine echte Buchung absenden."
+          >
+            To demonstracyjny formularz Smoobu z przykladowymi danymi. Nie skladaj w nim prawdziwej rezerwacji.
+          </p>
         </div>
       </section>
 
@@ -410,16 +456,16 @@
         <div class="container contact-box">
           <div class="contact-copy">
             <p class="section-label" data-pl="Kontakt" data-de="Kontakt">Kontakt</p>
-            <h2 data-pl="Booking.com, kontakt i WhatsApp" data-de="Booking.com, Kontakt und WhatsApp">
-              Booking.com, kontakt i WhatsApp
+            <h2 data-pl="Masz pytania? Napisz do nas" data-de="Fragen? Schreib uns">
+              Masz pytania? Napisz do nas
             </h2>
             <p
               class="contact-description"
-              data-pl="Rezerwacje sa obslugiwane przez Booking.com, a w sprawie pytan o pobyt lub szczegoly miejsca mozna szybko wyslac wiadomosc przez WhatsApp albo skontaktowac sie bezposrednio mailowo."
-              data-de="Reservierungen laufen ueber Booking.com. Bei Fragen zum Aufenthalt oder zu Details vor Ort kann man schnell eine Nachricht per WhatsApp senden oder direkt per E-Mail Kontakt aufnehmen."
+              data-pl="W sprawie pytan o pobyt, dostepnosc lub szczegoly miejsca mozna szybko wyslac wiadomosc przez WhatsApp albo skontaktowac sie bezposrednio mailowo."
+              data-de="Bei Fragen zum Aufenthalt, zur Verfuegbarkeit oder zu Details vor Ort kannst du schnell eine Nachricht per WhatsApp senden oder direkt per E-Mail Kontakt aufnehmen."
             >
-              Rezerwacje sa obslugiwane przez Booking.com, a w sprawie pytan o pobyt lub szczegoly miejsca mozna szybko
-              wyslac wiadomosc przez WhatsApp albo skontaktowac sie bezposrednio mailowo.
+              W sprawie pytan o pobyt, dostepnosc lub szczegoly miejsca mozna szybko wyslac wiadomosc przez WhatsApp
+              albo skontaktowac sie bezposrednio mailowo.
             </p>
           </div>
           <div class="contact-panel">
