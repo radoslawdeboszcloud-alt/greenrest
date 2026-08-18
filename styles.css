@@ -741,6 +741,80 @@ h3 {
   margin-top: 18px;
 }
 
+.booking-shell--demo {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1080px;
+  margin: 0 auto;
+  gap: 18px;
+}
+
+.booking-intro--demo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 28px;
+  text-align: left;
+}
+
+.booking-intro--demo > div {
+  max-width: 720px;
+}
+
+.booking-description {
+  max-width: 68ch;
+  margin: 14px 0 0;
+}
+
+.booking-demo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 9px 14px;
+  border: 1px solid rgba(23, 51, 40, 0.14);
+  border-radius: 999px;
+  background: rgba(183, 206, 165, 0.2);
+  color: var(--forest-700);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.smoobu-widget {
+  min-height: 520px;
+  padding: clamp(18px, 4vw, 36px);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.smoobu-widget iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  border: 0;
+}
+
+.smoobu-widget__fallback,
+.booking-demo-note {
+  color: var(--text-700);
+  text-align: center;
+}
+
+.booking-demo-note {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 0.82rem;
+}
+
+#zarezerwuj {
+  scroll-margin-top: 96px;
+}
+
 .contact-section {
   padding-bottom: 96px;
 }
@@ -1257,6 +1331,18 @@ h3 {
 
   .contact-box {
     gap: 24px;
+  }
+
+  .booking-intro--demo {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .smoobu-widget {
+    min-height: 460px;
+    padding: 14px;
+    border-radius: 24px;
   }
 
   .contact-actions,
