@@ -421,15 +421,13 @@
           </div>
 
           <div class="smoobu-widget" aria-label="Smoobu Booking Engine">
-            <div id="booking-tool-container-allApartments">
+            <div
+              id="booking-tool-container-allApartments"
+              data-smoobu-base-url="https://login.smoobu.com"
+              data-smoobu-url-pl="https://login.smoobu.com/pl/booking-tool/iframe/12532"
+              data-smoobu-url-de="https://login.smoobu.com/de/booking-tool/iframe/12532"
+            >
               <script src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
-              <script>
-                BookingToolIframe.initialize({
-                  url: "https://login.smoobu.com/en/booking-tool/iframe/12532",
-                  baseUrl: "https://login.smoobu.com",
-                  target: "#booking-tool-container-allApartments",
-                });
-              </script>
             </div>
             <noscript>
               <p
@@ -660,6 +658,7 @@
       const menuBackdrop = document.querySelector(".menu-backdrop");
       const whatsAppMessage = document.getElementById("whatsAppMessage");
       const whatsAppButton = document.getElementById("whatsAppButton");
+      const smoobuContainer = document.getElementById("booking-tool-container-allApartments");
 
       const impressumModal = document.getElementById("impressumModal");
       const openImpressum = document.querySelectorAll("[data-open-impressum]");
@@ -875,6 +874,28 @@
           : `https://wa.me/${phoneNumber}`;
       }
 
+      function smoobuUrlForLanguage(lang) {
+        if (!smoobuContainer) return "";
+        return lang === "de" ? smoobuContainer.dataset.smoobuUrlDe : smoobuContainer.dataset.smoobuUrlPl;
+      }
+
+      function renderSmoobuWidget(lang) {
+        if (!smoobuContainer) return;
+        if (typeof BookingToolIframe === "undefined" || typeof BookingToolIframe.initialize !== "function") return;
+
+        const nextUrl = smoobuUrlForLanguage(lang);
+        if (!nextUrl || smoobuContainer.dataset.smoobuActiveUrl === nextUrl) return;
+
+        smoobuContainer.dataset.smoobuActiveUrl = nextUrl;
+        smoobuContainer.replaceChildren();
+
+        BookingToolIframe.initialize({
+          url: nextUrl,
+          baseUrl: smoobuContainer.dataset.smoobuBaseUrl || "https://login.smoobu.com",
+          target: "#booking-tool-container-allApartments",
+        });
+      }
+
       function setLanguage(lang) {
         document.documentElement.lang = lang;
         translatable.forEach((element) => {
@@ -889,6 +910,7 @@
         renderNewsContent();
         updateLocalizedFields(lang);
         updateWhatsAppLink();
+        renderSmoobuWidget(lang);
       }
 
       langButtons.forEach((button) => {
@@ -966,6 +988,7 @@
       );
 
       revealItems.forEach((item) => revealObserver.observe(item));
+      renderSmoobuWidget(activeLanguage());
       updateGalleryItem(galleryIndex);
       loadNewsContent();
       updateLocalizedFields(activeLanguage());
