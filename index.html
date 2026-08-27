@@ -1038,11 +1038,9 @@
       );
 
       revealItems.forEach((item) => revealObserver.observe(item));
-      updateGalleryItem(galleryIndex);
+      setLanguage(activeLanguage());
       loadNewsContent();
       loadAvailabilityCalendar();
-      updateLocalizedFields(activeLanguage());
-      updateWhatsAppLink();
     </script>
   </body>
 </html>
