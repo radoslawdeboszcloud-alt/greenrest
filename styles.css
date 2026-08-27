@@ -208,7 +208,7 @@ button {
 
 .hero {
   position: relative;
-  min-height: 94vh;
+  min-height: max(94vh, 66.667vw);
   display: flex;
   align-items: end;
   overflow: clip;
@@ -232,7 +232,7 @@ button {
 .hero-media img {
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: left top;
 }
 
 .hero-overlay {
@@ -247,7 +247,7 @@ button {
   color: var(--white);
   width: min(590px, 100%);
   margin-left: auto;
-  padding: 0 0 120px 28px;
+  padding: 0 0 clamp(180px, 16vw, 300px) 28px;
   transform: translateX(clamp(0px, 10vw, 180px));
 }
 
@@ -1408,7 +1408,7 @@ h3 {
   }
 
   .hero {
-    min-height: 92vh;
+    min-height: 100svh;
   }
 
   .hero-content {
