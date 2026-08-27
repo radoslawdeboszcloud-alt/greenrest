@@ -245,14 +245,10 @@ button {
   position: relative;
   z-index: 1;
   color: var(--white);
-  width: min(680px, 100%);
+  width: min(590px, 100%);
   margin-left: auto;
-  padding: 38px 42px 58px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 28px;
-  background: linear-gradient(135deg, rgba(13, 31, 23, 0.9), rgba(13, 31, 23, 0.64));
-  box-shadow: -24px 24px 60px rgba(8, 21, 15, 0.24);
-  transform: translateX(clamp(0px, 8vw, 140px));
+  padding: 0 0 58px 28px;
+  transform: translateX(clamp(0px, 10vw, 180px));
 }
 
 .hero-content::after {
@@ -294,9 +290,10 @@ figure {
 
 h1 {
   margin-bottom: 18px;
-  font-size: clamp(2.7rem, 4.25vw, 4rem);
+  font-size: clamp(2.7rem, 3.85vw, 3.7rem);
   line-height: 1.08;
   letter-spacing: -0.04em;
+  text-shadow: 0 4px 22px rgba(7, 18, 13, 0.9);
 }
 
 h2 {
@@ -317,6 +314,7 @@ h3 {
   margin-bottom: 28px;
   font-size: 1.08rem;
   color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 3px 14px rgba(7, 18, 13, 0.9);
 }
 
 .hero-actions,
@@ -1421,8 +1419,8 @@ h3 {
     margin-left: 0;
     padding: 112px 24px 52px;
     max-width: 100%;
-    border-radius: 0;
-    box-shadow: none;
+    border: 0;
+    background: transparent;
     transform: none;
     text-align: center;
   }
