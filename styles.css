@@ -101,7 +101,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 16px;
   padding: 16px 0;
 }
 
@@ -127,12 +127,12 @@ button {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
 }
 
 .menu {
   display: flex;
-  gap: 10px;
+  gap: 2px;
   align-items: center;
 }
 
@@ -143,12 +143,13 @@ button {
   background: transparent;
   border: 1px solid transparent;
   border-radius: 999px;
-  padding: 10px 14px;
-  font-size: 0.95rem;
+  padding: 10px 8px;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: 0.2s ease;
   text-align: left;
   justify-content: flex-start;
+  white-space: nowrap;
 }
 
 .menu a:hover,
@@ -231,7 +232,8 @@ button {
 .hero-media img {
   height: 100%;
   object-fit: cover;
-  transform: scale(1.04);
+  object-position: center 25%;
+  transform: scale(1.02);
 }
 
 .hero-overlay {
@@ -245,7 +247,7 @@ button {
   z-index: 1;
   color: var(--white);
   padding: 128px 0 72px;
-  max-width: 760px;
+  max-width: 960px;
 }
 
 .hero-content::after {
