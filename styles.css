@@ -1411,6 +1411,10 @@ h3 {
     min-height: 100svh;
   }
 
+  .hero-media img {
+    object-position: right top;
+  }
+
   .hero-content {
     display: flex;
     flex-direction: column;
