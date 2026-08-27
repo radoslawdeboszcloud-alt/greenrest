@@ -734,6 +734,10 @@ h3 {
   margin: 8px auto 0;
 }
 
+.booking-cta {
+  justify-self: center;
+}
+
 .booking-pills {
   display: flex;
   flex-wrap: wrap;

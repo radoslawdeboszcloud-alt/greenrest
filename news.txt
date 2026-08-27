@@ -1,10 +1,10 @@
 # Edit this file to update the News modal.
 # Use \n inside ContentPL or ContentDE if you want a line break.
 
-TopicPL=Nowy sezon w Greenrest
-TopicDE=Neue Saison bei Greenrest
-ContentPL=Greenrest jest gotowy na nowy sezon. Czeka spokojna atmosfera, duzo zieleni i kameralny pobyt blisko natury.
-ContentDE=Greenrest ist bereit fuer die neue Saison. Es warten eine ruhige Atmosphaere, viel Gruen und ein persoenlicher Aufenthalt nah an der Natur.
-Image=assets/gallery-1.jpg
-ImageAltPL=Aktualnosc Greenrest
-ImageAltDE=Greenrest Neuigkeit
+TopicPL=Nowości z Weitblick am Rammenfeld
+TopicDE=Neuigkeiten aus Weitblick am Rammenfeld
+ContentPL=Najnowsze informacje dla gości znajdziesz tutaj.
+ContentDE=Hier finden Sie die neuesten Informationen für unsere Gäste.
+Image=assets/gallery-misty-panorama.png
+ImageAltPL=Aktualność Weitblick am Rammenfeld
+ImageAltDE=Neuigkeit Weitblick am Rammenfeld
