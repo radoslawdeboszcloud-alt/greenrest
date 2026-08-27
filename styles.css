@@ -232,8 +232,7 @@ button {
 .hero-media img {
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
-  transform: scale(1.02);
+  object-position: center top;
 }
 
 .hero-overlay {
@@ -246,8 +245,12 @@ button {
   position: relative;
   z-index: 1;
   color: var(--white);
-  padding: 128px 0 72px;
-  max-width: 960px;
+  width: min(620px, 100%);
+  margin-left: auto;
+  padding: 44px 44px 72px;
+  border-radius: 28px 0 0 0;
+  background: linear-gradient(135deg, rgba(13, 31, 23, 0.88), rgba(13, 31, 23, 0.58));
+  box-shadow: -24px 24px 60px rgba(8, 21, 15, 0.24);
 }
 
 .hero-content::after {
@@ -289,7 +292,7 @@ figure {
 
 h1 {
   margin-bottom: 18px;
-  font-size: clamp(2.7rem, 6vw, 5.2rem);
+  font-size: clamp(2.7rem, 4.6vw, 4.35rem);
   line-height: 1.08;
   letter-spacing: -0.04em;
 }
@@ -1412,8 +1415,12 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 112px 0 52px;
+    width: 100%;
+    margin-left: 0;
+    padding: 112px 24px 52px;
     max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
     text-align: center;
   }
 
