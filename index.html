@@ -408,6 +408,21 @@
             </div>
           </div>
           <a class="btn btn-primary booking-cta" href="https://www.booking.com/Share-9QRbYH" target="_blank" rel="noopener noreferrer" data-pl="Zarezerwuj przez Booking.com" data-de="Über Booking.com buchen">Zarezerwuj przez Booking.com</a>
+          <section class="availability-calendar" aria-labelledby="availabilityTitle" data-ical-url="availability-demo.ics">
+            <div class="availability-calendar__head">
+              <div>
+                <p class="section-label" data-pl="Dostępność" data-de="Verfügbarkeit">Dostępność</p>
+                <h3 id="availabilityTitle" data-pl="Kalendarz dostępności" data-de="Verfügbarkeitskalender">Kalendarz dostępności</h3>
+              </div>
+              <span class="availability-calendar__demo" data-pl="Dane demonstracyjne" data-de="Demodaten">Dane demonstracyjne</span>
+            </div>
+            <div class="availability-calendar__legend" aria-label="Calendar legend">
+              <span><i class="availability-calendar__key availability-calendar__key--free"></i><b data-pl="Dostępne" data-de="Frei">Dostępne</b></span>
+              <span><i class="availability-calendar__key availability-calendar__key--booked"></i><b data-pl="Zajęte" data-de="Belegt">Zajęte</b></span>
+            </div>
+            <div class="availability-calendar__months" id="availabilityMonths" aria-live="polite"></div>
+            <p class="availability-calendar__note" data-pl="To przykładowy kalendarz iCal do prezentacji. Przed uruchomieniem rezerwacji zostanie podłączony do właściwego kalendarza obiektu." data-de="Dies ist ein iCal-Beispielkalender zur Präsentation. Vor dem Start der Buchungen wird er mit dem echten Kalender der Unterkunft verbunden.">To przykładowy kalendarz iCal do prezentacji. Przed uruchomieniem rezerwacji zostanie podłączony do właściwego kalendarza obiektu.</p>
+          </section>
         </div>
       </section>
 
@@ -609,6 +624,8 @@
       const menuBackdrop = document.querySelector(".menu-backdrop");
       const whatsAppMessage = document.getElementById("whatsAppMessage");
       const whatsAppButton = document.getElementById("whatsAppButton");
+      const availabilityCalendar = document.querySelector(".availability-calendar");
+      const availabilityMonths = document.getElementById("availabilityMonths");
 
       const impressumModal = document.getElementById("impressumModal");
       const openImpressum = document.querySelectorAll("[data-open-impressum]");
@@ -704,6 +721,7 @@
 
       let galleryIndex = 0;
       let newsData = defaultNewsData;
+      let bookedDates = new Set();
 
       function activeLanguage() {
         return document.documentElement.lang === "de" ? "de" : "pl";
@@ -833,6 +851,101 @@
           : `https://wa.me/${phoneNumber}`;
       }
 
+      function icalDateToLocal(value) {
+        const match = value && value.match(/^(\d{4})(\d{2})(\d{2})/);
+        if (!match) return null;
+        return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+      }
+
+      function dateKey(date) {
+        return [date.getFullYear(), String(date.getMonth() + 1).padStart(2, "0"), String(date.getDate()).padStart(2, "0")].join("-");
+      }
+
+      function parseIcalBookings(rawText) {
+        const dates = new Set();
+        const events = rawText.split("BEGIN:VEVENT").slice(1);
+
+        events.forEach((event) => {
+          const startMatch = event.match(/DTSTART(?:;[^:]*)?:(\d{8})/);
+          const endMatch = event.match(/DTEND(?:;[^:]*)?:(\d{8})/);
+          const start = icalDateToLocal(startMatch && startMatch[1]);
+          const end = icalDateToLocal(endMatch && endMatch[1]);
+          if (!start || !end) return;
+
+          const cursor = new Date(start);
+          while (cursor < end) {
+            dates.add(dateKey(cursor));
+            cursor.setDate(cursor.getDate() + 1);
+          }
+        });
+
+        return dates;
+      }
+
+      function renderAvailabilityCalendar() {
+        if (!availabilityMonths) return;
+        const lang = activeLanguage();
+        const locale = lang === "de" ? "de-DE" : "pl-PL";
+        const weekdays = lang === "de" ? ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"] : ["Pn", "Wt", "Śr", "Cz", "Pt", "So", "Nd"];
+        const today = new Date();
+        const firstMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+
+        availabilityMonths.replaceChildren();
+        for (let offset = 0; offset < 3; offset += 1) {
+          const month = new Date(firstMonth.getFullYear(), firstMonth.getMonth() + offset, 1);
+          const monthElement = document.createElement("section");
+          monthElement.className = "availability-month";
+
+          const monthName = document.createElement("p");
+          monthName.className = "availability-month__name";
+          monthName.textContent = month.toLocaleDateString(locale, { month: "long", year: "numeric" });
+          monthElement.append(monthName);
+
+          const weekdayElement = document.createElement("div");
+          weekdayElement.className = "availability-month__weekdays";
+          weekdays.forEach((day) => {
+            const label = document.createElement("span");
+            label.textContent = day;
+            weekdayElement.append(label);
+          });
+          monthElement.append(weekdayElement);
+
+          const daysElement = document.createElement("div");
+          daysElement.className = "availability-month__days";
+          const firstDay = (month.getDay() + 6) % 7;
+          const daysInMonth = new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate();
+          for (let blank = 0; blank < firstDay; blank += 1) {
+            const empty = document.createElement("span");
+            empty.className = "availability-day availability-day--empty";
+            daysElement.append(empty);
+          }
+          for (let day = 1; day <= daysInMonth; day += 1) {
+            const date = new Date(month.getFullYear(), month.getMonth(), day);
+            const cell = document.createElement("span");
+            const booked = bookedDates.has(dateKey(date));
+            cell.className = `availability-day${booked ? " availability-day--booked" : ""}`;
+            cell.textContent = String(day);
+            cell.setAttribute("aria-label", `${day} ${month.toLocaleDateString(locale, { month: "long" })}${booked ? lang === "de" ? ", belegt" : ", zajęte" : lang === "de" ? ", frei" : ", dostępne"}`);
+            daysElement.append(cell);
+          }
+          monthElement.append(daysElement);
+          availabilityMonths.append(monthElement);
+        }
+      }
+
+      async function loadAvailabilityCalendar() {
+        if (!availabilityCalendar) return;
+        const calendarUrl = availabilityCalendar.dataset.icalUrl;
+        try {
+          const response = await fetch(`${calendarUrl}?ts=${Date.now()}`, { cache: "no-store" });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          bookedDates = parseIcalBookings(await response.text());
+        } catch (error) {
+          bookedDates = new Set();
+        }
+        renderAvailabilityCalendar();
+      }
+
       function setLanguage(lang) {
         document.documentElement.lang = lang;
         translatable.forEach((element) => {
@@ -847,6 +960,7 @@
         renderNewsContent();
         updateLocalizedFields(lang);
         updateWhatsAppLink();
+        renderAvailabilityCalendar();
       }
 
       langButtons.forEach((button) => {
@@ -926,6 +1040,7 @@
       revealItems.forEach((item) => revealObserver.observe(item));
       updateGalleryItem(galleryIndex);
       loadNewsContent();
+      loadAvailabilityCalendar();
       updateLocalizedFields(activeLanguage());
       updateWhatsAppLink();
     </script>

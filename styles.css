@@ -740,6 +740,129 @@ h3 {
   justify-self: center;
 }
 
+.availability-calendar {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow);
+}
+
+.availability-calendar__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.availability-calendar__head .section-label {
+  margin-bottom: 5px;
+}
+
+.availability-calendar__head h3 {
+  margin-bottom: 0;
+  font-size: 1.45rem;
+}
+
+.availability-calendar__demo {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--sand-200);
+  color: var(--forest-700);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.availability-calendar__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 18px 0;
+  color: var(--text-700);
+  font-size: 0.82rem;
+}
+
+.availability-calendar__legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.availability-calendar__key {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.availability-calendar__key--free {
+  background: rgba(95, 143, 99, 0.3);
+  border: 1px solid var(--forest-500);
+}
+
+.availability-calendar__key--booked {
+  background: rgba(111, 76, 58, 0.5);
+}
+
+.availability-calendar__months {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.availability-month {
+  padding: 14px;
+  border: 1px solid rgba(23, 51, 40, 0.1);
+  border-radius: 18px;
+}
+
+.availability-month__name {
+  margin: 0 0 10px;
+  color: var(--forest-900);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.availability-month__weekdays,
+.availability-month__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+  text-align: center;
+}
+
+.availability-month__weekdays {
+  margin-bottom: 5px;
+  color: var(--text-700);
+  font-size: 0.65rem;
+}
+
+.availability-day {
+  display: grid;
+  min-height: 27px;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--text-900);
+  font-size: 0.76rem;
+}
+
+.availability-day--empty {
+  visibility: hidden;
+}
+
+.availability-day--booked {
+  background: rgba(111, 76, 58, 0.52);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.availability-calendar__note {
+  margin: 18px 0 0;
+  color: var(--text-700);
+  font-size: 0.82rem;
+}
+
 .booking-pills {
   display: flex;
   flex-wrap: wrap;
@@ -1220,6 +1343,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .availability-calendar__months {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .contact-copy h2 {
     max-width: none;
   }
@@ -1271,6 +1398,10 @@ h3 {
 
   .nav-actions {
     gap: 10px;
+  }
+
+  .availability-calendar__months {
+    grid-template-columns: 1fr;
   }
 
   .hero {
